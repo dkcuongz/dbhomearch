@@ -23,6 +23,12 @@ Aplikasi bebas digunakan untuk berbagai kepentingan, akan tetapi jika digunakan 
 Semoga Bermanfaat. Wassalam.
 
 Run command
+
+php artisan adminlte:install
+php artisan ui bootstrap --auth
+php artisan adminlte:install --type=full
+php artisan adminlte:plugins install
+
 php artisan vendor:publish --tag=ckfinder-assets --tag=ckfinder-config
 php artisan vendor:publish --tag=ckfinder-views
 php artisan vendor:publish --tag=ckfinder

@@ -52,5 +52,71 @@ class CategoriesSeeder extends Seeder
             'slug' => 'lien-he',
             'has_child' => 0
         ]);
+        Categories::create([
+            'parent_id' => 2,
+            'name' => 'Thông tin - Tầm nhìn - Sứ mệnh',
+            'slug' => 'thong-tin-tam-nhin-su-menh',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 2,
+            'name' => 'Qui trình làm việc',
+            'slug' => 'qui-trinh-lam-viec',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 3,
+            'name' => 'Nội Thất Căn Hộ',
+            'slug' => 'noi-that-can-ho',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 3,
+            'name' => 'Nội Thất Nhà Phố',
+            'slug' => 'noi-that-nha-pho',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 3,
+            'name' => 'Nội Thất Biệt Thự - Penhouse - Duplex',
+            'slug' => 'noi-that-biet-thu-penhouse-duplex/',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 3,
+            'name' => 'Phong Cách Hiện Đại',
+            'slug' => 'phong-cach-hien-dai',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 3,
+            'name' => 'Phong Cách Tân Cổ Điển - Luxury',
+            'slug' => 'phong-cach-tan-co-dien-luxury',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 3,
+            'name' => 'Phong Cách Khác',
+            'slug' => 'phong-cach-khac',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 5,
+            'name' => 'Ưu Đãi',
+            'slug' => 'uu-dai',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 5,
+            'name' => 'Hoạt Động Công Ty',
+            'slug' => 'hoat-dong-cong-ty',
+            'has_child' => 0
+        ]);
+        Categories::create([
+            'parent_id' => 5,
+            'name' => 'Kinh Nghiệm - Kiến Thức',
+            'slug' => 'kinh-nghiem-kien-thuc',
+            'has_child' => 0
+        ]);
     }
 }

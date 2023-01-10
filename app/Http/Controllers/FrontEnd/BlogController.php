@@ -37,4 +37,15 @@ class BlogController extends Controller
         $news = $this->repository->with('image')->get();
         return view('front-end.news.index', compact('news'));
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $new = $this->repository->with('image')->find($id);
+        return view('front-end.news.detail', compact('new'));
+    }
 }

@@ -54,6 +54,9 @@ Route::group([
     Route::get('/gioi-thieu', [IntroduceController::class, 'index'])
         ->name('gioi-thieu');
 
+    Route::get('/gioi-thieu/{slug}', [IntroduceController::class, 'show'])
+        ->name('gioi-thieu.child');
+
     Route::get('/thiet-ke-noi-that', [InteriorController::class, 'index'])
         ->name('thiet-ke-noi-that');
 
@@ -65,6 +68,9 @@ Route::group([
 
     Route::get('/tin-tuc-blog', [BlogController::class, 'index'])
         ->name('tin-tuc-blog');
+
+    Route::get('/tin-tuc-blog/{slug}', [BlogController::class, 'show'])
+        ->name('tin-tuc-blog.child');
 
     Route::get('/lien-he', [ContactController::class, 'index'])
         ->name('lien-he');

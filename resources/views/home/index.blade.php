@@ -15,10 +15,10 @@
                         <div class="col-inner">
                             <h3 style="text-align: center;"><span
                                     style="color: #daa520; font-size: 120%;">THIẾT KẾ MỚI<br/><img loading="lazy"
-                                                                                                   class="aligncenter wp-image-109"
-                                                                                                   src="../bizhostvn.com/w/noithat3/wp-content/uploads/2018/01/line.png"
-                                                                                                   alt="" width="72"
-                                                                                                   height="5"/></span>
+                                   class="aligncenter wp-image-109"
+                                   src="../bizhostvn.com/w/noithat3/wp-content/uploads/2018/01/line.png"
+                                   alt="" width="72"
+                                   height="5"/></span>
                             </h3>
                             <div
                                 class="row large-columns-4 medium-columns-1 small-columns-2 row-small has-shadow row-box-shadow-1">

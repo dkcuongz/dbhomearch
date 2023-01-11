@@ -9,7 +9,7 @@
                     <h3 style="text-align: center;"><span style="font-size: 120%; color: #003366;"><span
                                 style="color: #f99b1c;">VÌ SAO BẠN CHỌN CHÚNG TÔI?</span><br/><img
                                 loading="lazy" class="aligncenter wp-image-109"
-                                src="../bizhostvn.com/w/noithat3/wp-content/uploads/2018/01/line.png" alt=""
+                                src="{{ asset('images-UI/line.png') }}"
                                 width="72" height="5"/></span></h3>
                     <div id="gap-484099733" class="gap-element clearfix" style="display:block; height:auto;">
                     </div>
@@ -21,7 +21,8 @@
                         <div class="icon-box-img" style="width: 84px">
                             <div class="icon">
                                 <div class="icon-inner">
-                                    <img width="100" height="100" src="wp-content/uploads/2018/01/icon-1.png"
+                                    <img width="100" height="100"
+                                         src="{{asset("wp-content/uploads/2018/01/icon-1.png")}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>
@@ -40,7 +41,8 @@
                         <div class="icon-box-img" style="width: 84px">
                             <div class="icon">
                                 <div class="icon-inner">
-                                    <img width="100" height="100" src="wp-content/uploads/2018/01/icon-2.png"
+                                    <img width="100" height="100"
+                                         src="{{asset('wp-content/uploads/2018/01/icon-2.png')}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>
@@ -60,7 +62,8 @@
                         <div class="icon-box-img" style="width: 84px">
                             <div class="icon">
                                 <div class="icon-inner">
-                                    <img width="100" height="100" src="wp-content/uploads/2018/01/icon-3.png"
+                                    <img width="100" height="100"
+                                         src="{{asset('wp-content/uploads/2018/01/icon-3.png')}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>
@@ -80,7 +83,8 @@
                         <div class="icon-box-img" style="width: 84px">
                             <div class="icon">
                                 <div class="icon-inner">
-                                    <img width="100" height="100" src="wp-content/uploads/2018/01/icon-4.png"
+                                    <img width="100" height="100"
+                                         src="{{asset('wp-content/uploads/2018/01/icon-4.png')}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>
@@ -113,38 +117,49 @@
                                                                aria-atomic="true"></p>
                             <ul></ul>
                         </div>
-                        <form action="#wpcf7-f399-p5-o1" method="post" class="wpcf7-form init"
+                        <form action="{{route('front.lien-he.store')}}" method="post" class="wpcf7-form init"
                               novalidate="novalidate" data-status="init">
-                            <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="399"/>
-                                <input type="hidden" name="_wpcf7_version" value="5.6.4"/>
-                                <input type="hidden" name="_wpcf7_locale" value="vi"/>
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f399-p5-o1"/>
-                                <input type="hidden" name="_wpcf7_container_post" value="5"/>
-                                <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
+                            @csrf
+                            <div class="form-group">
+                                <span class="wpcf7-form-control-wrap" data-name="text-877">
+                                    <input type="text"
+                                           name="name"
+                                           value=""
+                                           class="form-control @error('name') is-invalid @enderror"
+                                           placeholder="Nhập tên của bạn"/>
+                                      @error('name') <span class="text-danger">{{$message}}</span> @enderror
+                                </span>
+
                             </div>
-                            <p><span class="wpcf7-form-control-wrap" data-name="text-877"><input type="text"
-                                                                                                 name="text-877"
-                                                                                                 value=""
-                                                                                                 size="40"
-                                                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                                 aria-required="true"
-                                                                                                 aria-invalid="false"
-                                                                                                 placeholder="Nhập tên của bạn"/></span><br/>
-                                <span class="wpcf7-form-control-wrap" data-name="text-885"><input type="text"
-                                                                                                  name="text-885"
-                                                                                                  value=""
-                                                                                                  size="40"
-                                                                                                  class="wpcf7-form-control wpcf7-text"
-                                                                                                  aria-invalid="false"
-                                                                                                  placeholder="SĐT và Địa chỉ"/></span><br/>
-                                <span class="wpcf7-form-control-wrap" data-name="textarea-637"><textarea
-                                        name="textarea-637" cols="40" rows="10"
-                                        class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                            <br/>
+                            <div class="form-group">
+                            <span class="wpcf7-form-control-wrap" data-name="text-885">
+                                    <input type="text"
+                                           name="phone"
+                                           value=""
+                                           size="40"
+                                           class="form-control @error('phone') is-invalid @enderror"
+                                           aria-invalid="false"
+                                           placeholder="SĐT và Địa chỉ"/>
+                                </span>
+                                @error('phone') <span class="text-danger">{{$message}}</span> @enderror
+                            </div>
+                            <br/>
+                            <div class="form-group">
+                            <span class="wpcf7-form-control-wrap" data-name="textarea-637">
+                                    <textarea
+                                        name="content" cols="40" rows="10"
+                                        class="form-control @error('content') is-invalid @enderror"
                                         aria-required="true" aria-invalid="false"
-                                        placeholder="Chi tiết yêu cầu"></textarea></span><br/>
-                                <input type="submit" value="Gửi yêu cầu"
-                                       class="wpcf7-form-control has-spinner wpcf7-submit"/></p>
+                                        placeholder="Chi tiết yêu cầu">
+
+                                    </textarea>
+                                </span>
+                                @error('content') <span class="text-danger">{{$message}}</span> @enderror
+                            </div>
+                            <br/>
+                            <input type="submit" value="Gửi yêu cầu"
+                                   class="wpcf7-form-control has-spinner wpcf7-submit"/>
                             <div class="wpcf7-response-output" aria-hidden="true"></div>
                         </form>
                     </div>

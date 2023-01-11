@@ -21,6 +21,9 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer(
             'components.banner', 'App\Http\ViewComposers\BannerComposer'
         );
+        View::composer(
+            'components.news', 'App\Http\ViewComposers\NewsComposer'
+        );
     }
 
     /**

@@ -10,7 +10,7 @@
 
                         <h3 style="text-align: center;"><span style="color: #DAA520; font-size: 120%;">LĨNH VỰC HOẠT ĐỘNG<br/><img
                                     class="aligncenter wp-image-109"
-                                    src="../bizhostvn.com/w/noithat3/wp-content/uploads/2018/01/line.png" alt=""
+                                    src="{{ asset('images-UI/line.png') }}" alt=""
                                     width="70" height="5"/></span></h3>
                     </div>
 

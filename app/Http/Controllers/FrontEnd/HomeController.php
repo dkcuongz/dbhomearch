@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\FrontEnd;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\CategoriesRepository;
+use App\Repositories\PostRepository;
 
 class HomeController extends Controller
 {
@@ -12,16 +12,16 @@ class HomeController extends Controller
      *
      * @return void
      */
-    protected $categoryRepository;
+    protected $postRepository;
 
     /**
      * categoriesController constructor.
      *
-     * @param CategoriesRepository $categoryRepository
+     * @param PostRepository $postRepository
      */
-    public function __construct(CategoriesRepository $categoryRepository)
+    public function __construct(PostRepository $postRepository)
     {
-        $this->categoryRepository = $categoryRepository;
+        $this->postRepository = $postRepository;
     }
 
     /**
@@ -31,6 +31,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index');
+        $posts = $this->postRepository->with('image')->all();
+        return view('home.index', compact('posts'));
     }
 }

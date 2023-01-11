@@ -34,7 +34,18 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $interiors = $this->repository->with('image')->get();
-        return view('front-end.project.index', compact('interiors'));
+        $projects = $this->repository->with('image')->get();
+        return view('front-end.projects.index', compact('projects'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function detail($id)
+    {
+        $project = $this->repository->with('image')->find($id);
+        return view('front-end.projects.detail', compact('project'));
     }
 }

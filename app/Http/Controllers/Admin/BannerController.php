@@ -163,7 +163,9 @@ class BannerController extends Controller
      */
     public function destroy($id)
     {
-        $this->repository->delete($id);
+        $banner = $this->repository->find($id);
+        $banner->images()->delete();
+        $banner->delete();
         return redirect()->back()->with('success_message', 'Xóa banner thành công');
     }
 }

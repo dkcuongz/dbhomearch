@@ -21,7 +21,7 @@
                         <tr>
                             <th>Số TT</th>
                             <th>Tiêu đề</th>
-                            <th>Mô tả</th>
+                            <th>Thumbnail</th>
                             <th>Trạng thái</th>
                             <th style="width: 15%" class="text-center">Hành động</th>
                         </tr>
@@ -31,7 +31,11 @@
                             <tr>
                                 <td>{{$key+1}}</td>
                                 <td>{{$post->title}}</td>
-                                <td><div class="summary-content">{!! $post->description !!}</div></td>
+                                <td>
+                                    <div class="summary-content"><img
+                                            src="{{asset($post->image->path ?? 'images-UI/notfound.jpg')}}" alt="">
+                                    </div>
+                                </td>
                                 <th><p class="font-weight-normal">{{$post->status ? 'Hiển thị' :'Ẩn' }}</p></th>
                                 <td class="text-center">
                                     <a href="{{route('admin.posts.show', $post)}}" class="btn btn-primary btn-xs">

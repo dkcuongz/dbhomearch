@@ -26,7 +26,7 @@
                             <label for="exampleInputEmail">Ảnh</label>
                             <div class="col-md-12 mb-2">
                                 <img id="preview-image-before-upload"
-                                     src="{{asset($banner->image->path ?? '')}}"
+                                     src="{{asset($banner->image->path ?? 'images-UI/notfound.jpg')}}"
                                      alt="preview image" style="max-height: 250px;">
                             </div>
                         </div>

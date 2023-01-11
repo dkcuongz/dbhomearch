@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <form action="{{route('admin.posts.store')}}" method="post">
+    <form action="{{route('admin.posts.store')}}" method="post" enctype="multipart/form-data" id="upload-image">
         @csrf
         <div class="row">
             <div class="col-12">
@@ -20,7 +20,20 @@
                                    id="exampleInputName" placeholder="Tiêu đề" name="title" value="{{old('title')}}">
                             @error('title') <span class="text-danger">{{$message}}</span> @enderror
                         </div>
+                        <div class="form-group">
+                            <label for="exampleInputName">Ảnh thumbnail</label>
+                            <br>
+                            <input type="file" name="image" placeholder="Chọn ảnh" id="image">
+                            @error('image')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror
+                        </div>
 
+                        <div class="col-md-12 mb-2">
+                            <img id="preview-image-before-upload"
+                                 src="{{asset('images-UI/notfound.jpg')}}"
+                                 alt="preview image" style="max-height: 250px;">
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail">Nội dung</label>
                             <textarea class="summernote form-control @error('description') is-invalid @enderror"
@@ -61,5 +74,28 @@
         });
     </script>
     @include('ckfinder::setup')
+    @push('js')
+        <script type="text/javascript">
+
+            $(document).ready(function (e) {
+
+
+                $('#image').change(function () {
+
+                    let reader = new FileReader();
+
+                    reader.onload = (e) => {
+
+                        $('#preview-image-before-upload').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(this.files[0]);
+
+                });
+
+            });
+
+        </script>
+    @endpush
 @stop
 

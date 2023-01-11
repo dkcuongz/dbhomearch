@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="file" name="image" placeholder="Choose image" id="image">
+                            <input type="file" name="image" placeholder="Chọn ảnh" id="image">
                             @error('image')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                             @enderror
@@ -35,7 +35,7 @@
 
                         <div class="col-md-12 mb-2">
                             <img id="preview-image-before-upload"
-                                 src=""
+                                 src="{{asset('images-UI/notfound.jpg')}}"
                                  alt="preview image" style="max-height: 250px;">
                         </div>
 

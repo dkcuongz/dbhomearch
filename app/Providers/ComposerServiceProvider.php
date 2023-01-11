@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Providers;
+
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,6 +17,9 @@ class ComposerServiceProvider extends ServiceProvider
         // Using class based composers...
         View::composer(
             'components.header', 'App\Http\ViewComposers\CategoryComposer'
+        );
+        View::composer(
+            'components.banner', 'App\Http\ViewComposers\BannerComposer'
         );
     }
 

@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <form action="{{route('admin.posts.update', $post)}}" method="post">
+    <form action="{{route('admin.posts.update', $post)}}" method="post" enctype="multipart/form-data" id="upload-image">
         @method('PUT')
         @csrf
         <div class="row">
@@ -22,7 +22,19 @@
                                    value="{{old('title') ?? $post->title}}">
                             @error('title') <span class="text-danger">{{$message}}</span> @enderror
                         </div>
-
+                        <div class="form-group">
+                            <label for="exampleInputName">Ảnh thumbnail</label>
+                            <br>
+                            <input type="file" name="image" placeholder="Chọn ảnh" id="image">
+                            @error('image')
+                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <img id="preview-image-before-upload"
+                                 src="{{asset($post->image->path ?? 'images-UI/notfound.jpg')}}"
+                                 alt="preview image" style="max-height: 250px;">
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail">Nội dung</label>
                             <textarea class="summernote form-control @error('description') is-invalid @enderror"
@@ -34,7 +46,8 @@
                         <div class="form-group">
                             <label for="status">Trạng thái</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" {{ $post->status == '1' ? 'checked' : '' }} name="status" id="status" value="1">
+                                <input class="form-check-input" type="checkbox"
+                                       {{ $post->status == '1' ? 'checked' : '' }} name="status" id="status" value="1">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Hoạt động
                                 </label>
@@ -63,4 +76,27 @@
         });
     </script>
     @include('ckfinder::setup')
+    @push('js')
+        <script type="text/javascript">
+
+            $(document).ready(function (e) {
+
+
+                $('#image').change(function () {
+
+                    let reader = new FileReader();
+
+                    reader.onload = (e) => {
+
+                        $('#preview-image-before-upload').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(this.files[0]);
+
+                });
+
+            });
+
+        </script>
+    @endpush
 @stop

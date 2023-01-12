@@ -32,7 +32,7 @@
                                                 <div class="is-divider"></div>
                                                 <p class="from_the_blog_excerpt ">Tháng 9-2022 vừa qua, toàn thể thành
                                                     viên
-                                                    VN Luxury đã có buổi cắm trại </p>
+                                                    DBHome đã có buổi cắm trại </p>
                                             </div>
                                         </div>
                                     </div>

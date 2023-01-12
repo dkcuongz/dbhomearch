@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <h3><span style="color: #DAA520;">Hỗ trợ tận tình</span></h3>
-                    <p><span style="font-size: 12.96px;">VN Luxury cam kết hỗ trợ tận tình các thông tin khách hàng thắc mắc 24/24. Bảo hành, bảo trì sau bán hàng nhanh chóng.</span>
+                    <p><span style="font-size: 12.96px;">DBHome cam kết hỗ trợ tận tình các thông tin khách hàng thắc mắc 24/24. Bảo hành, bảo trì sau bán hàng nhanh chóng.</span>
                     </p>
                 </div>
             </div>

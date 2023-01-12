@@ -5,12 +5,11 @@
                 <!-- Logo -->
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
-                    <a href="{{route('front.home')}}" title="Nội Thất VN Luxury - Đi đầu chất lượng" rel="home">
-                        <img width="1020" height="515" src="{{asset('wp-content/uploads/2022/02/VN-Luxury-1024x517.png')}}"
-                             class="header_logo header-logo" alt="Nội Thất VN Luxury"/><img width="1020" height="515"
-                                                                                            src="{{asset('wp-content/uploads/2022/02/VN-Luxury-1024x517.png')}}"
-                                                                                            class="header-logo-dark"
-                                                                                            alt="Nội Thất VN Luxury"/></a>
+                    <a href="{{route('front.home')}}" title="Nội Thất Dbhome - Đi đầu chất lượng" rel="home">
+                        <img width="1020" height="515"
+                             src="{{asset('images-UI/logo-01.png')}}"
+                             class="header-logo-dark"
+                             alt="Nội Thất Dbhome"/></a>
                 </div>
                 <!-- Mobile Left Elements -->
                 <div class="flex-col show-for-medium flex-left">

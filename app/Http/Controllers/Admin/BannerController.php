@@ -61,8 +61,8 @@ class BannerController extends Controller
     {
         DB::beginTransaction();
         try {
-            $data = $request->with('image')->get();
-            $data['status'] = $data['status'] ?? 0;
+            $data = $request->all();
+            $data['status'] = $data['status'] ?? 1;
             $data['type'] = config('constants.post.type.banner');
             $banner = $this->repository->create($data);
 
@@ -128,7 +128,6 @@ class BannerController extends Controller
         DB::beginTransaction();
         try {
             $data = $request->all();
-            $data['status'] = $data['status'] ?? 0;
             $data['type'] = config('constants.post.type.banner');
             $banner = $this->repository->update($request->all(), $id);
 

@@ -51,7 +51,7 @@ class ContactController extends Controller
             $data = $request->all();
             $contact = $this->repository->create($data);
             $response = [
-                'message' => 'Contact created.',
+                'message' => 'Đã lưu thông tin, chúng tôi sẽ liên hệ sau.',
                 'data' => $contact->toArray(),
             ];
             return redirect()->back()->with('message', $response['message']);

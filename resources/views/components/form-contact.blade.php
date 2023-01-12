@@ -50,7 +50,7 @@
 
                             <h3 style="text-align: center;"><span
                                     style="color: #daa520;">Thiết kế sáng tạo</span></h3>
-                            <p style="text-align: center;"><span style="font-size: 90%;">VN Luxury sở hữu 100% những chuyên gia tư vấn thiết kế và thi công nội ngoại thất nhà hàng vô cùng trẻ tuổi đầy năng động và sáng tạo.</span>
+                            <p style="text-align: center;"><span style="font-size: 90%;">DBHome sở hữu 100% những chuyên gia tư vấn thiết kế và thi công nội ngoại thất nhà hàng vô cùng trẻ tuổi đầy năng động và sáng tạo.</span>
                             </p>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                     <h3> </h3>
                     <h3>Lời nhắn gửi</h3>
                     <p> &#8221; Quý khách hàng hãy điền vào ô bên cạnh càng nhiều càng tốt như: địa điểm công
-                        trình, hiện trạng, sở thích, yêu cầu đặt ra, SĐT liên lạc&#8230; để đội ngũ VN Luxury hỗ
+                        trình, hiện trạng, sở thích, yêu cầu đặt ra, SĐT liên lạc&#8230; để đội ngũ DBHome hỗ
                         trợ các thông tin đầy đủ và nhanh nhất . <br/> Xin trân trọng cảm ơn! &#8220;</p>
                 </div>
             </div>

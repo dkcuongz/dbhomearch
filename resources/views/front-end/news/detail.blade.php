@@ -30,7 +30,7 @@
                         <div class="entry-content single-page">
 
                             <h1 style="text-align: center;">Tổ chức ngày quốc tế phụ nữ 8-3 năm 2022</h1>
-                            <p>Nhân dịp ngày quốc tế phụ nữ 8.3 năm 2022, các nam nhân VN Luxury đã “bí mật” tổ chức một
+                            <p>Nhân dịp ngày quốc tế phụ nữ 8.3 năm 2022, các nam nhân DBHome đã “bí mật” tổ chức một
                                 bữa tiệc nhỏ và gửi tặng hoa tới các chị em trong cty. Chúc chị em luôn xinh tươi, rạng
                                 ngời và thành công trong cuộc sống. Buổi liên hoan đã diễn ra trong không khí vui tươi,
                                 ngập tràn tiếng cười, tinh thần đồng đội theo đó ngày một gắn kết.</p>
@@ -40,7 +40,7 @@
                                     srcset="https://noithatvnluxury.vn/wp-content/uploads/2022/03/z3243187804611_75c6a43b6638e8ee669386cd5108257f-1.jpg 1263w, https://noithatvnluxury.vn/wp-content/uploads/2022/03/z3243187804611_75c6a43b6638e8ee669386cd5108257f-1-300x158.jpg 300w, https://noithatvnluxury.vn/wp-content/uploads/2022/03/z3243187804611_75c6a43b6638e8ee669386cd5108257f-1-1024x539.jpg 1024w, https://noithatvnluxury.vn/wp-content/uploads/2022/03/z3243187804611_75c6a43b6638e8ee669386cd5108257f-1-768x404.jpg 768w"
                                     sizes="(max-width: 1263px) 100vw, 1263px"/></p>
                             <p style="text-align: center;">Ban lãnh đạo trao hoa cho các chị em trong công ty.</p>
-                            <p>VN Luxury coi chữ NHÂN là một phần trong giá trị cốt lõi, chúng tôi không chỉ đem đến chế
+                            <p>DBHome coi chữ NHÂN là một phần trong giá trị cốt lõi, chúng tôi không chỉ đem đến chế
                                 độ phúc lợi tốt mà coi môi trường làm việc cũng rất quan trọng. Bởi con người có nhiệt
                                 huyết thì sản phẩm mới tốt, dịch vụ trở lên chuyên nghiệp, trải nghiệm khách hàng theo
                                 đó cũng ngày càng tuyệt vời hơn.</p>

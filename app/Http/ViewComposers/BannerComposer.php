@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\ViewComposers;
 
 use App\Repositories\BannerRepository;
@@ -31,7 +32,7 @@ class BannerComposer
      */
     public function compose(View $view)
     {
-        $banners = $this->bannerRepository->with('image')->get();
+        $banners = $this->bannerRepository->with('image')->where('status', 1)->orderBy('updated_at', 'DESC')->take(3)->get();
         $view->with('banners', $banners);
     }
 }

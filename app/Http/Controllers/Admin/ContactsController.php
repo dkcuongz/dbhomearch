@@ -3,21 +3,22 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\ContactRepository;
 use Illuminate\Http\Request;
 
 class ContactsController extends Controller
 {
     /**
-     * @var UserRepository
+     * @var ContactRepository
      */
     protected $repository;
 
     /**
      * UsersController constructor.
      *
-     * @param UserRepository $repository
+     * @param ContactRepository $repository
      */
-    public function __construct(UserRepository $repository)
+    public function __construct(ContactRepository $repository)
     {
         $this->repository = $repository;
     }
@@ -29,37 +30,8 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        $users = $this->repository->all();
-        return view('admin.users.index', compact('users'));
-    }
-
-
-    public function create()
-    {
-        return view('admin.users.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param UserCreateRequest $request
-     *
-     * @return \Illuminate\Http\Response
-     *
-     */
-    public function store(UserCreateRequest $request)
-    {
-        try {
-            $user = $this->repository->create($request->all());
-
-            $response = [
-                'message' => 'User created.',
-                'data' => $user->toArray(),
-            ];
-            return redirect()->back()->with('message', $response['message']);
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
-        }
+        $contacts = $this->repository->all();
+        return view('admin.contacts.index', compact('contacts'));
     }
 
     /**
@@ -71,47 +43,9 @@ class ContactsController extends Controller
      */
     public function show($id)
     {
-        $user = $this->repository->find($id);
-        return view('admin.users.show', compact('user'));
+        $contact = $this->repository->find($id);
+        return view('admin.contacts.detail', compact('contact'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $user = $this->repository->find($id);
-
-        return view('admin.users.edit', compact('user'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param UserUpdateRequest $request
-     * @param string $id
-     *
-     * @return \Illuminate\Http\Response
-     *
-     */
-    public function update(UserUpdateRequest $request, $id)
-    {
-        try {
-            $user = $this->repository->update($request->all(), $id);
-            $response = [
-                'message' => 'User updated.',
-                'data' => $user->toArray(),
-            ];
-            return redirect()->back()->with('message', $response['message']);
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
-        }
-    }
-
 
     /**
      * Remove the specified resource from storage.
@@ -123,6 +57,6 @@ class ContactsController extends Controller
     public function destroy($id)
     {
         $this->repository->delete($id);
-        return redirect()->back()->with('message', 'User deleted.');
+        return redirect()->back()->with('message', 'Xóa thành công');
     }
 }

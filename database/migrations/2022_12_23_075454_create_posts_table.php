@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->tinyInteger('type')->default(1);
+            $table->integer('category_id')->default(0);
             $table->tinyInteger('status');
             $table->timestamps();
         });

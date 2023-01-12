@@ -13,7 +13,7 @@
                         <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_197201674">
                             <div class="img-inner dark" style="margin:0px 0px 0px 0px;">
                                 <img width="1020" height="515"
-                                     src="{{asset('wp-content/uploads/2022/02/VN-Luxury-1024x517.png')}}"
+                                     src="{{asset('images-UI/logo-01.png')}}"
                                      class="attachment-large size-large"
                                      alt=""/>
                             </div>
@@ -23,7 +23,7 @@
                                 }
                             </style>
                         </div>
-                        <p style="text-align: center;"><span style="font-size: 120%;">MST: 0109499355</span></p>
+                        <p style="text-align: center;"><span style="font-size: 120%;">MST: </span></p>
                         <p> </p>
                     </div>
                     <style>
@@ -36,14 +36,14 @@
                 <div id="col-2085735894" class="col medium-5 small-12 large-5">
                     <div class="col-inner">
                         <p style="text-align: center;"><span
-                                style="font-size: 130%;">CTCP ĐẦU TƯ VÀ KIẾN TRÚC VN LUXURY</span></p>
+                                style="font-size: 130%; text-transform: uppercase">Công ty kiến trúc và nội thất DBHome</span>
+                        </p>
                         <ul>
-                            <li>Trụ sở: Lô 13 ô DV 04 Khu đất dịch vụ trong Khu đô thị Tây Nam hồ Linh Đàm, Phường Hoàng
-                                Liệt, Quận Hoàng Mai, Thành phố Hà Nội.
+                            <li>Trụ sở: 46 Trần Phú, Ph.Tân Dân, Thành phố Việt Trì, Phú Thọ.
                             </li>
-                            <li>VPGD: 39- Lê Văn Lương- Nhân Chính- Thanh Xuân- Hà Nội.</li>
-                            <li>Hotline: 0986 359 515</li>
-                            <li>Email: cskh@noithatvnluxury.vn</li>
+                            <li>VPGD: Tháp A Licogi13 Tower, 164 Khuất Duy Tiến, Nhân Chính, Thanh Xuân, Hà Nội</li>
+                            <li>Hotline: 094 310 24 68</li>
+                            <li>Email: cskh@dbhomeach.vn</li>
                         </ul>
                         <div id="gap-1609019296" class="gap-element clearfix" style="display:block; height:auto;">
                             <style>
@@ -65,13 +65,12 @@
                 <div id="col-1495132283" class="col medium-4 small-12 large-4">
                     <div class="col-inner">
                         <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnoithatvnluxury%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnoithatdbhome%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId"
                             width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                             allowfullscreen="true"
                             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
                         <div id="gap-958367344" class="gap-element clearfix" style="display:block; height:auto;">
-
                             <style>
                                 #gap-958367344 {
                                     padding-top: 10px;
@@ -94,7 +93,7 @@
             }
 
             #section_410059410 .section-bg.bg-loaded {
-                background-image: url(wp-content/uploads/2022/06/9.jpg);
+                background-image: url({{asset('wp-content/uploads/2022/06/9.jpg')}});
             }
 
             #section_410059410 .ux-shape-divider--top svg {

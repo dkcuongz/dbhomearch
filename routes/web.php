@@ -42,7 +42,6 @@ Route::any('/ckfinder/examples/{example?}', [CKFinderController::class, 'example
 //front routes
 Route::group([
     'as' => 'front.',
-    'middleware' => ['admin', 'auth'],
 ], function () {
 
     Route::get('/', [HomeController::class, 'index'])

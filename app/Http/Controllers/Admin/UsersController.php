@@ -36,7 +36,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = $this->repository->all();
+        $users = $this->repository->where('role_id', config('constants.user.roles.user'))->get();
         return view('admin.users.index', compact('users'));
     }
 
@@ -57,15 +57,16 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         try {
-            $user = $this->repository->create($request->all());
-
-            $response = [
-                'message' => 'User created.',
-                'data' => $user->toArray(),
-            ];
-            return redirect()->back()->with('success_message', $response['message']);
+        $data = $request->all();
+        $data['role_id'] = config('constants.user.roles.user');
+        $user = $this->repository->create($data);
+        $response = [
+            'message' => 'Tạo mới người dùng thành công.',
+            'data' => $user->toArray(),
+        ];
+            return redirect(route('admin.users.index'))->with('success_message', $response['message']);
         } catch (\Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message',$e->getMessage())->withInput();
         }
     }
 
@@ -78,7 +79,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = $this->repository->find($id);
+        $user = $this->repository->where('role_id', config('constants.user.roles.user'))->find($id);
         return view('admin.users.show', compact('user'));
     }
 
@@ -91,9 +92,9 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = $this->repository->find($id);
+        $user = $this->repository->where('role_id', config('constants.user.roles.user'))->find($id);
 
-        return view('users.edit', compact('user'));
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
@@ -108,12 +109,14 @@ class UsersController extends Controller
     public function update(UserUpdateRequest $request, $id)
     {
         try {
-            $user = $this->repository->update($request->all(), $id);
+            $data = $request->all();
+            $data['role_id'] = config('constants.user.roles.user');
+            $user = $this->repository->update($data, $id);
             $response = [
-                'message' => 'User updated.',
+                'message' => 'Chỉnh sửa người dùng thành công.',
                 'data' => $user->toArray(),
             ];
-            return redirect()->back()->with('success_message', $response['message']);
+            return redirect(route('admin.users.index'))->with('success_message', $response['message']);
         } catch (\Exception $e) {
             return redirect()->back()->with('error_message', $e->getMessage())->withInput();
         }
@@ -130,6 +133,6 @@ class UsersController extends Controller
     public function destroy($id)
     {
         $this->repository->delete($id);
-        return redirect()->back()->with('success_message', 'User deleted.');
+        return redirect()->back()->with('success_message', 'Xóa người dùng thành công.');
     }
 }

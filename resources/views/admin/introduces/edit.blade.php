@@ -1,31 +1,32 @@
 @extends('adminlte::page')
 
-@section('title', 'Tạo mới bài viết')
+@section('title', 'Chỉnh sửa bài viết giới thiệu')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Tạo mới bài viết</h1>
+    <h1 class="m-0 text-dark">Chỉnh sửa bài viết giới thiệu</h1>
 @stop
 
 @section('content')
-    <form action="{{route('admin.posts.store')}}" method="post" enctype="multipart/form-data" id="upload-image">
+    <form action="{{route('admin.introduce.update', $post)}}" method="post" enctype="multipart/form-data" id="upload-image">
+        @method('PUT')
         @csrf
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="exampleInputName">Danh mục cha</label>
                             <select name="category_id" id="" class="form-control">
                             @foreach ($categories as $subcategory)
                                 <!-- Include categories.blade.php file and pass the current category to it -->
-                                    @include('admin.categories.categories', ['parent_id'=>0,'category' => $subcategory, $level=''])
+                                    @include('admin.categories.categories', ['parent_id'=>$subcategory->parent_id,'category' => $subcategory, $level=''])
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputName">Tiêu đề</label>
                             <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                   id="exampleInputName" placeholder="Tiêu đề" name="title" value="{{old('title')}}">
+                                   id="exampleInputName" placeholder="Tiêu đề" name="title"
+                                   value="{{old('title') ?? $post->title}}">
                             @error('title') <span class="text-danger">{{$message}}</span> @enderror
                         </div>
                         <div class="form-group">
@@ -36,23 +37,24 @@
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                             @enderror
                         </div>
-
                         <div class="col-md-12 mb-2">
                             <img id="preview-image-before-upload"
-                                 src="{{asset('images-UI/notfound.jpg')}}"
+                                 src="{{asset($post->image->path ?? 'images-UI/notfound.jpg')}}"
                                  alt="preview image" style="max-height: 250px;">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail">Nội dung</label>
                             <textarea class="summernote form-control @error('description') is-invalid @enderror"
-                                      id="text" cols="30" rows="10" placeholder="Mô tả" name="description">{{old('description')}}</textarea>
+                                      id="text" cols="30" rows="10" placeholder="Mô tả"
+                                      name="description">{{old('description') ?? $post->description}}</textarea>
                             @error('description') <span class="text-danger">{{$message}}</span> @enderror
                             @include('ckfinder::setup')
                         </div>
                         <div class="form-group">
                             <label for="status">Trạng thái</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="status" id="status" value="1">
+                                <input class="form-check-input" type="checkbox"
+                                       {{ $post->status == '1' ? 'checked' : '' }} name="status" id="status" value="1">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Hoạt động
                                 </label>
@@ -62,9 +64,9 @@
                     </div>
 
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Tạo mới</button>
-                        <a href="{{route('admin.posts.index')}}" class="btn btn-default">
-                            Danh sách bài viết
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        <a href="{{route('admin.introduce.index')}}" class="btn btn-default">
+                            Danh sách bài viết giới thiệu
                         </a>
                     </div>
                 </div>
@@ -77,8 +79,7 @@
             filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
             filebrowserUploadUrl: '{{ route('ckfinder_connector') }}',
             filebrowserWindowWidth: '1000',
-            filebrowserWindowHeight: '700',
-            height: '1000'
+            filebrowserWindowHeight: '700'
         });
     </script>
     @include('ckfinder::setup')
@@ -106,4 +107,3 @@
         </script>
     @endpush
 @stop
-

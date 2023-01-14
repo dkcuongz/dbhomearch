@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
+use App\Repositories\CategoriesRepository;
 use App\Repositories\ImageRepository;
 use App\Repositories\PostRepository;
 use Illuminate\Support\Facades\DB;
@@ -23,14 +24,22 @@ class PostsController extends Controller
     protected $imageRepository;
 
     /**
+     * The user repository implementation.
+     *
+     * @var CategoriesRepository
+     */
+    protected $categoryRepository;
+
+    /**
      * postsController constructor.
      *
      * @param PostRepository $repository
      */
-    public function __construct(PostRepository $repository, ImageRepository $imageRepository)
+    public function __construct(PostRepository $repository, ImageRepository $imageRepository, CategoriesRepository $categoryRepository)
     {
         $this->repository = $repository;
         $this->imageRepository = $imageRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -40,14 +49,19 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = $this->repository->with('image')->get();
+        $posts = $this->repository->with('image')->whereHas('category', function ($query) {
+            $query->whereHas('parent', function ($subQuery) {
+                $subQuery->where(['id' => 3]);
+            });
+        })->where('type',config('constants.post.type.post'))->get();
         return view('admin.posts.index', compact('posts'));
     }
 
 
     public function create()
     {
-        return view('admin.posts.create');
+        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 3)->get();
+        return view('admin.posts.create', compact('categories'));
     }
 
     /**
@@ -64,7 +78,6 @@ class PostsController extends Controller
             $data = $request->all();
             $data['type'] = config('constants.post.type.post');
             $post = $this->repository->create($data);
-
             if ($request->file('image')) {
                 $file = $request->file('image');
                 $filename = $file->hashName();
@@ -82,7 +95,7 @@ class PostsController extends Controller
             return redirect(route('admin.posts.index'))->with('success_message', $response['message']);
         } catch (\Exception $e) {
             DB::rollBack();
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message', $e->getMessage())->withInput();
         }
     }
 
@@ -95,8 +108,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
+        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 3)->get();
         $post = $this->repository->with('image')->find($id);
-        return view('admin.posts.detail', compact('post'));
+        return view('admin.posts.detail', compact('post', 'categories'));
     }
 
     /**
@@ -108,9 +122,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
+        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 3)->get();
         $post = $this->repository->with('image')->find($id);
-
-        return view('admin.posts.edit', compact('post'));
+        return view('admin.posts.edit', compact('post', 'categories'));
     }
 
     /**
@@ -145,7 +159,7 @@ class PostsController extends Controller
             return redirect(route('admin.posts.index'))->with('success_message', $response['message']);
         } catch (\Exception $e) {
             DB::rollBack();
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message', $e->getMessage())->withInput();
         }
     }
 

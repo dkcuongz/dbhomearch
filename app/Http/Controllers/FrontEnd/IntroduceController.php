@@ -32,8 +32,10 @@ class IntroduceController extends Controller
      */
     public function index()
     {
-        $introduces = $this->repository->all();
-        return view('front-end.introduces.detail', compact('introduces'));
+        $introduce = $this->repository->whereHas('category', function ($query) {
+            $query->where('id', 7);
+        })->first();
+        return view('front-end.introduces.detail', compact('introduce'));
     }
 
     /**
@@ -43,7 +45,9 @@ class IntroduceController extends Controller
      */
     public function show($slug)
     {
-        $introduce = $this->repository->find($slug);
+        $introduce = $this->repository->whereHas('category', function ($query) use ($slug) {
+            $query->where('slug', $slug);
+        })->first();
         return view('front-end.introduces.detail', compact('introduce'));
     }
 }

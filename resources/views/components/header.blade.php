@@ -37,10 +37,12 @@
                         <li class="header-search-form search-form html relative has-icon">
                             <div class="header-search-form-wrapper">
                                 <div class="searchform-wrapper ux-search-box relative is-normal">
-                                    <form method="get" class="searchform" action="" role="search">
+                                    <form method="get" class="searchform" action="{{route('front.search.project')}}"
+                                          role="search">
                                         <div class="flex-row relative">
                                             <div class="flex-col flex-grow">
-                                                <input type="search" class="search-field mb-0" name="s" value="" id="s"
+                                                <input type="search" class="search-field mb-0" name="search" value=""
+                                                       id="search"
                                                        placeholder="Search&hellip;"/>
                                             </div>
                                             <div class="flex-col">
@@ -50,7 +52,10 @@
                                                     <i class="icon-search"></i></button>
                                             </div>
                                         </div>
-                                        <div class="live-search-results text-left z-top"></div>
+                                        <div class="live-search-results text-left z-top">
+                                            <div class="autocomplete-suggestions" style="">
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -70,7 +75,7 @@
                                                 <div class="flex-row relative">
                                                     <div class="flex-col flex-grow">
                                                         <input type="search" class="search-field mb-0" name="s" value=""
-                                                               id="s" placeholder="Search&hellip;"/>
+                                                               id="search" placeholder="Search&hellip;"/>
                                                     </div>
                                                     <div class="flex-col">
                                                         <button type="submit"
@@ -79,7 +84,9 @@
                                                             <i class="icon-search"></i></button>
                                                     </div>
                                                 </div>
-                                                <div class="live-search-results text-left z-top"></div>
+                                                <div id="result-search"
+                                                     class="live-search-results text-left z-top">
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -101,3 +108,22 @@
         </div>
     </div>
 </header>
+@push('js')
+    <script type="text/javascript">
+        $('#search').on('keyup', function () {
+            console.log('aa')
+            $value = $(this).val();
+            $.ajax({
+                type: 'get',
+                url: '{{ URL::to('front.search.project') }}',
+                data: {
+                    'search': $value
+                },
+                success: function (data) {
+                    $('result-search').html(data);
+                }
+            });
+        })
+        $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
+    </script>
+@endpush

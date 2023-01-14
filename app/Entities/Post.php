@@ -16,6 +16,7 @@ class Post extends Model implements Transformable
         'description',
         'type',
         'status',
+        'category_id'
     ];
 
     public function user()
@@ -31,5 +32,10 @@ class Post extends Model implements Transformable
     public function image()
     {
         return $this->hasOne(Image::class, 'post_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Categories::class, 'category_id');
     }
 }

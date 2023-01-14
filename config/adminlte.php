@@ -225,11 +225,6 @@ return [
 
     'menu' => [
         [
-            'text' => 'Người dùng',
-            'url' => '/admin/users',
-            'icon' => 'fa fa-users',
-        ],
-        [
             'text' => 'Danh mục',
             'url' => '/admin/categories',
             'icon' => 'fa fa-address-book',
@@ -241,19 +236,29 @@ return [
             'icon' => 'fa fa-file',
         ],
         [
-            'text' => 'Bài viết quảng cáo',
-            'url' => '/admin/main-contents',
-            'icon' => 'fa fa-comment',
-        ],
-        [
             'text' => 'Bài viết',
             'url' => '/admin/posts',
             'icon' => 'fa fa-clipboard',
         ],
         [
+            'text' => 'Bài viết sự kiện',
+            'url' => '/admin/main-contents',
+            'icon' => 'fa fa-comment',
+        ],
+        [
+            'text' => 'Bài viết giới thiệu',
+            'url' => '/admin/introduce',
+            'icon' => 'fa fa-comment',
+        ],
+        [
             'text' => 'Liên hệ',
             'url' => '/admin/contacts',
             'icon' => 'fa fa-phone',
+        ],
+        [
+            'text' => 'Người dùng',
+            'url' => '/admin/users',
+            'icon' => 'fa fa-users',
         ],
     ],
 

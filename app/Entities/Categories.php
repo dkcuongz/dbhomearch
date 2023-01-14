@@ -46,4 +46,9 @@ class Categories extends Model implements Transformable
     {
         return 'slug';
     }
+
+    public function post()
+    {
+        return $this->hasMany(Post::class, 'category_id');
+    }
 }

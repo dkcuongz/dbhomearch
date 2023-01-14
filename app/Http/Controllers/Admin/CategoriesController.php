@@ -64,7 +64,7 @@ class CategoriesController extends Controller
             ];
             return redirect(route('admin.categories.index'))->with('message', $response['message']);
         } catch (\Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message',$e->getMessage())->withInput();
         }
     }
 
@@ -113,7 +113,7 @@ class CategoriesController extends Controller
             ];
             return redirect(route('admin.categories.index'))->with('message', $response['message']);
         } catch (\Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message',$e->getMessage())->withInput();
         }
     }
 

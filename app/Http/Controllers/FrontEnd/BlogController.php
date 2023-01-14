@@ -34,18 +34,25 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $news = $this->repository->with('image')->get();
+        $news = $this->repository->with('image')->where('status', 1)
+            ->where('type', config('constants.post.type.new'))->orderBy('created_at', 'DESC')->paginate(8);
         return view('front-end.news.index', compact('news'));
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function byCategory($slug)
     {
-        $new = $this->repository->with('image')->find($id);
+        $news = $this->repository->with('image')->where('status', 1)
+            ->where('type', config('constants.post.type.new'))
+            ->whereHas('category', function ($query) use($slug){
+                $query->where('slug', $slug);
+            })->orderBy('created_at', 'DESC')->paginate(8);
+        return view('front-end.news.index', compact('news'));
+    }
+
+    public function show($slug, $id)
+    {
+        $new = $this->repository->with('image')->where('status', 1)
+            ->where('type', config('constants.post.type.new'))->orderBy('created_at', 'DESC')->find($id);
         return view('front-end.news.detail', compact('new'));
     }
 }

@@ -83,7 +83,7 @@ class BannerController extends Controller
             return redirect(route('admin.banners.index'))->with('success_message', $response['message']);
         } catch (\Exception $e) {
             DB::rollBack();
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message',$e->getMessage())->withInput();
         }
     }
 
@@ -148,7 +148,7 @@ class BannerController extends Controller
             return redirect(route('admin.banners.index'))->with('success_message', $response['message']);
         } catch (\Exception $e) {
             DB::rollBack();
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message',$e->getMessage())->withInput();
         }
     }
 

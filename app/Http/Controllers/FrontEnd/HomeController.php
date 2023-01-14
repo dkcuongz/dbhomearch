@@ -4,6 +4,7 @@ namespace App\Http\Controllers\FrontEnd;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -33,5 +34,21 @@ class HomeController extends Controller
     {
         $posts = $this->postRepository->with('image')->all();
         return view('home.index', compact('posts'));
+    }
+
+    public function search(Request $request)
+    {
+        if ($request->ajax()) {
+            $output = '';
+            $posts = $this->postRepository->where('title', 'LIKE', '%' . $request->search . '%')->get();
+            if ($posts) {
+                foreach ($posts as $key => $post) {
+                    $output .= '<div class="autocomplete-suggestion" data-index="0">
+                    <img class="search-image" src="' . $post->image->path . '">' . '
+                    <div class="search-name">' . $post->title . '</div>';
+                }
+            }
+            return Response($output);
+        }
     }
 }

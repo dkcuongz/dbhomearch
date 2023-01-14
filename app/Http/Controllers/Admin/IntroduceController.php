@@ -3,19 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\MainContentCreateRequest;
-use App\Http\Requests\MainContentUpdateRequest;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
 use App\Repositories\CategoriesRepository;
 use App\Repositories\ImageRepository;
 use App\Repositories\MainContentRepository;
 use App\Repositories\PostRepository;
+use Illuminate\Http\Request;
 
-class MainContentController extends Controller
+class IntroduceController extends Controller
 {
     /**
-     * @var MainContentRepository
+     * @var PostRepository
      */
     protected $repository;
 
@@ -34,11 +33,11 @@ class MainContentController extends Controller
     /**
      * postsController constructor.
      *
-     * @param MainContentRepository $repository
+     * @param PostRepository $repository
      * @param ImageRepository $imageRepository
      * @param CategoriesRepository $categoryRepository
      */
-    public function __construct(MainContentRepository $repository, ImageRepository $imageRepository, CategoriesRepository $categoryRepository)
+    public function __construct(PostRepository $repository, ImageRepository $imageRepository, CategoriesRepository $categoryRepository)
     {
         $this->repository = $repository;
         $this->imageRepository = $imageRepository;
@@ -54,17 +53,17 @@ class MainContentController extends Controller
     {
         $posts = $this->repository->with('image')->whereHas('category', function ($query) {
             $query->whereHas('parent', function ($subQuery) {
-                $subQuery->where(['id' => 5]);
+                $subQuery->where(['id' => 2]);
             });
-        })->where('type',config('constants.post.type.new'))->get();
-        return view('admin.posts-event.index', compact('posts'));
+        })->where('type',config('constants.post.type.introduce'))->get();
+        return view('admin.introduces.index', compact('posts'));
     }
 
 
     public function create()
     {
         $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 5)->get();
-        return view('admin.posts-event.create', compact('categories'));
+        return view('admin.introduces.create', compact('categories'));
     }
 
     /**
@@ -79,7 +78,7 @@ class MainContentController extends Controller
         DB::beginTransaction();
         try {
             $data = $request->all();
-            $data['type'] = config('constants.post.type.new');
+            $data['type'] = config('constants.post.type.introduce');
             $post = $this->repository->create($data);
             if ($request->file('image')) {
                 $file = $request->file('image');
@@ -111,9 +110,9 @@ class MainContentController extends Controller
      */
     public function show($id)
     {
-        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 5)->get();
+        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 2)->get();
         $post = $this->repository->with('image')->find($id);
-        return view('admin.posts-event.detail', compact('post', 'categories'));
+        return view('admin.introduces.detail', compact('post', 'categories'));
     }
 
     /**
@@ -125,9 +124,9 @@ class MainContentController extends Controller
      */
     public function edit($id)
     {
-        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 5)->get();
+        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 2)->get();
         $post = $this->repository->with('image')->find($id);
-        return view('admin.posts-event.edit', compact('post', 'categories'));
+        return view('admin.introduces.edit', compact('post', 'categories'));
     }
 
     /**
@@ -143,7 +142,7 @@ class MainContentController extends Controller
         DB::beginTransaction();
         try {
             $data = $request->all();
-            $data['type'] = config('constants.post.type.new');
+            $data['type'] = config('constants.post.type.introduce');
             $post = $this->repository->update($data, $id);
             if ($request->file('image')) {
                 $file = $request->file('image');

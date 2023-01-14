@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\MainContentController;
 use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
+use App\Http\Controllers\Admin\IntroduceController as AdminIntroduceController;
 use CKSource\CKFinderBridge\Controller\CKFinderController;
 
 /*
@@ -47,6 +48,9 @@ Route::group([
     Route::get('/', [HomeController::class, 'index'])
         ->name('home');
 
+    Route::get('/search', [HomeController::class, 'search'])
+        ->name('search.project');
+
     Route::get('/trang-chu', [HomeController::class, 'index'])
         ->name('trang-chu');
 
@@ -59,8 +63,11 @@ Route::group([
     Route::get('/thiet-ke-noi-that', [InteriorController::class, 'index'])
         ->name('thiet-ke-noi-that');
 
-    Route::get('/thiet-ke-noi-that/{slug}', [InteriorController::class, 'index'])
+    Route::get('/thiet-ke-noi-that/{slug}', [InteriorController::class, 'byCategory'])
         ->name('thiet-ke-noi-that.child');
+
+    Route::get('/thiet-ke-noi-that/{slug}/{id}', [InteriorController::class, 'show'])
+        ->name('thiet-ke-noi-that.detail');
 
     Route::get('/du-an', [ProjectController::class, 'index'])
         ->name('du-an');
@@ -71,8 +78,11 @@ Route::group([
     Route::get('/tin-tuc-blog', [BlogController::class, 'index'])
         ->name('tin-tuc-blog');
 
-    Route::get('/tin-tuc-blog/{slug}', [BlogController::class, 'show'])
+    Route::get('/tin-tuc-blog/{slug}', [BlogController::class, 'byCategory'])
         ->name('tin-tuc-blog.child');
+
+    Route::get('/tin-tuc-blog/{slug}/{id}', [BlogController::class, 'show'])
+        ->name('tin-tuc-blog.detail');
 
     Route::get('/lien-he', [ContactController::class, 'index'])
         ->name('lien-he');
@@ -94,5 +104,6 @@ Route::group([
     Route::resource('posts', PostsController::class);
     Route::resource('banners', BannerController::class);
     Route::resource('main-contents', MainContentController::class);
+    Route::resource('introduce', AdminIntroduceController::class);
     Route::resource('contacts', ContactsController::class);
 });

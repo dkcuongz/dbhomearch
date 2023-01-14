@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Tạo mới bài viết')
+@section('title', 'Tạo mới bài viết sự kiện')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Tạo mới bài viết</h1>
+    <h1 class="m-0 text-dark">Tạo mới bài viết sự kiện</h1>
 @stop
 
 @section('content')
-    <form action="{{route('admin.posts.store')}}" method="post" enctype="multipart/form-data" id="upload-image">
+    <form action="{{route('admin.main-contents.store')}}" method="post" enctype="multipart/form-data" id="upload-image">
         @csrf
         <div class="row">
             <div class="col-12">
@@ -63,8 +63,8 @@
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Tạo mới</button>
-                        <a href="{{route('admin.posts.index')}}" class="btn btn-default">
-                            Danh sách bài viết
+                        <a href="{{route('admin.main-contents.index')}}" class="btn btn-default">
+                            Danh sách bài viết sự kiện
                         </a>
                     </div>
                 </div>

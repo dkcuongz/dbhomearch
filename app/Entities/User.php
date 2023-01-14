@@ -24,9 +24,10 @@ class User extends Authenticatable implements Transformable
     protected $fillable = [
         'name',
         'email',
-        'role',
+        'role_id',
         'email_verified_at',
         'password',
+        'status',
     ];
 
     public function isAdmin()

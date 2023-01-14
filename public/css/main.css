@@ -5,6 +5,7 @@
 #text-box-747700104 .text-box-content {
     font-size: 100%;
 }
+
 #banner-814651861 {
     padding-top: 50%;
 }
@@ -26,6 +27,7 @@
     height: 150px;
     --divider-width: 100%;
 }
+
 #text-box-131564625 {
     width: 60%;
 }
@@ -33,6 +35,7 @@
 #text-box-131564625 .text-box-content {
     font-size: 100%;
 }
+
 #banner-1709087121 {
     padding-top: 50%;
 }
@@ -54,6 +57,7 @@
     height: 150px;
     --divider-width: 100%;
 }
+
 #text-box-583357908 {
     width: 60%;
 }
@@ -61,6 +65,7 @@
 #text-box-583357908 .text-box-content {
     font-size: 100%;
 }
+
 #banner-412214127 {
     padding-top: 100%;
 }
@@ -86,6 +91,7 @@
     height: 150px;
     --divider-width: 100%;
 }
+
 #text-508722338 {
     color: rgb(218, 165, 32);
 }
@@ -93,21 +99,27 @@
 #text-508722338 > * {
     color: rgb(218, 165, 32);
 }
+
 #gap-224752545 {
     padding-top: 10px;
 }
+
 #image_2010468916 {
     width: 100%;
 }
+
 #image_482633641 {
     width: 100%;
 }
+
 #image_1538820236 {
     width: 100%;
 }
+
 #image_610530270 {
     width: 100%;
 }
+
 #section_507727432 {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -130,31 +142,39 @@
     height: 150px;
     --divider-width: 100%;
 }
+
 #gap-252482128 {
     padding-top: 20px;
 }
+
 #section_1670075441 {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: rgb(255, 255, 255);
 }
+
 #section_1670075441 .section-bg-overlay {
     background-color: rgba(0, 0, 0, 0.738);
 }
+
 #section_1670075441 .section-bg.bg-loaded {
     background-image: url('/wp-content/uploads/2022/02/90000_Post.jpg');
 }
+
 #section_1670075441 .ux-shape-divider--top svg {
     height: 150px;
     --divider-top-width: 100%;
 }
+
 #section_1670075441 .ux-shape-divider--bottom svg {
     height: 150px;
     --divider-width: 100%;
 }
+
 #gap-484099733 {
     padding-top: 20px;
 }
+
 #section_1077278195 {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -177,9 +197,11 @@
     height: 150px;
     --divider-width: 100%;
 }
+
 #gap-72504431 {
     padding-top: 20px;
 }
+
 #section_547799504 {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -202,6 +224,14 @@
     height: 150px;
     --divider-width: 100%;
 }
+
 #gap-379839177 {
     padding-top: 30px;
+}
+
+.current {
+    border-color: #000000;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 2rem;
 }

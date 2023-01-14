@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Chi tiết bài viết')
+@section('title', 'Chi tiết bài viết sự kiện')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Chi tiết bài viết</h1>
+    <h1 class="m-0 text-dark">Chi tiết bài viết sự kiện</h1>
 @stop
 
 @section('content')
@@ -39,8 +39,8 @@
                     </div>
 
                     <div class="card-footer">
-                        <a href="{{route('admin.posts.index')}}" class="btn btn-default">
-                            Danh sách bài viết
+                        <a href="{{route('admin.main-contents.index')}}" class="btn btn-default">
+                            Danh sách bài viết sự kiện
                         </a>
                     </div>
                 </div>

@@ -34,7 +34,25 @@ class InteriorController extends Controller
      */
     public function index()
     {
-        $interiors = $this->repository->with('image')->get();
+        $interiors = $this->repository->with('image')->where('status', 1)
+            ->where('type', config('constants.post.type.post'))->orderBy('created_at', 'DESC')->paginate(8);
         return view('front-end.interiors.index', compact('interiors'));
+    }
+
+    public function byCategory($slug)
+    {
+        $interiors = $this->repository->with('image')->where('status', 1)
+            ->where('type', config('constants.post.type.post'))
+            ->whereHas('category', function ($query) use($slug){
+                $query->where('slug', $slug);
+            })->orderBy('created_at', 'DESC')->paginate(8);
+        return view('front-end.interiors.index', compact('interiors'));
+    }
+
+    public function show($slug, $id)
+    {
+        $interior = $this->repository->with('image')->where('status', 1)
+            ->where('type', config('constants.post.type.post'))->orderBy('created_at', 'DESC')->find($id);
+        return view('front-end.interiors.detail', compact('interior'));
     }
 }

@@ -14,7 +14,14 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-
+                        <div class="form-group">
+                            <select name="category_id" id="" class="form-control">
+                            @foreach ($categories as $subcategory)
+                                <!-- Include categories.blade.php file and pass the current category to it -->
+                                    @include('admin.categories.categories', ['parent_id'=>$subcategory->parent_id,'category' => $subcategory, $level=''])
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputName">Tiêu đề</label>
                             <input type="text" class="form-control @error('title') is-invalid @enderror"

@@ -56,7 +56,7 @@ class ContactController extends Controller
             ];
             return redirect()->back()->with('message', $response['message']);
         } catch (\Exception $e) {
-            return redirect()->back()->withErrors($e->getMessage())->withInput();
+            return redirect()->back()->with('error_message',$e->getMessage())->withInput();
         }
     }
 }

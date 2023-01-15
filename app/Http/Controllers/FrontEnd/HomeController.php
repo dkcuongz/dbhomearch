@@ -38,17 +38,25 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
+        $interiors = $this->postRepository->where('title', 'LIKE', '%' . $request->search . '%')
+            ->where('status', 1)->where('type', config('constants.post.type.post'));
         if ($request->ajax()) {
             $output = '';
-            $posts = $this->postRepository->where('title', 'LIKE', '%' . $request->search . '%')->get();
-            if ($posts) {
-                foreach ($posts as $key => $post) {
+            $interiors = $interiors->get();
+            if ($interiors) {
+                foreach ($interiors as $key => $interior) {
                     $output .= '<div class="autocomplete-suggestion" data-index="0">
-                    <img class="search-image" src="' . $post->image->path . '">' . '
-                    <div class="search-name">' . $post->title . '</div>';
+                    <a class="hover-seach" href="' . route('front.thiet-ke-noi-that.detail', [$interior->category->slug ?? '', $interior->id]) . '">
+                    <img class="search-image" src="' . asset($interior->image->path) . '">' . '
+                    <div class="search-name">' . $interior->title . '</div>
+                    </a>
+                    </div>';
                 }
             }
             return Response($output);
+        } else {
+            $interiors = $interiors->paginate(8);
+            return view('front-end.interiors.index', compact('interiors'));
         }
     }
 }

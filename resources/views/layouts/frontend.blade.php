@@ -9,12 +9,15 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title> @yield('title')</title>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <link rel="prefetch" href="{{asset('wp-content/themes/flatsome/assets/js/chunk.countup.fe2c1016.js')}}" />
     <link rel="prefetch" href="{{asset('wp-content/themes/flatsome/assets/js/chunk.sticky-sidebar.a58a6557.js')}}" />
     <link rel="prefetch" href="{{asset('wp-content/themes/flatsome/assets/js/chunk.tooltips.29144c1c.js')}}" />
     <link rel="prefetch" href="{{asset('wp-content/themes/flatsome/assets/js/chunk.vendors-popups.947eca5c.js')}}" />
     <link rel="prefetch" href="{{asset('wp-content/themes/flatsome/assets/js/chunk.vendors-slider.f0d2cbc9.js')}}" />
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}">
+
+
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <style type="text/css">
         img.wp-smiley,
@@ -187,3 +190,19 @@
         <a href="tel:094 310 24 68">Hotline: 094 310 24 68</a>
     </button>
 </div>
+<script type="text/javascript">
+    $('#search').on('keyup', function () {
+        $value = $(this).val();
+        $.ajax({
+            type: 'get',
+            url: '{{ URL::to(route('front.search.project')) }}',
+            data: {
+                'search': $value
+            },
+            success: function (data) {
+                $('#result-search').html(data);
+            }
+        });
+    })
+    $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
+</script>

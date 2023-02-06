@@ -107,3 +107,7 @@ Route::group([
     Route::resource('introduce', AdminIntroduceController::class);
     Route::resource('contacts', ContactsController::class);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

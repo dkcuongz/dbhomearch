@@ -1,5 +1,4 @@
 <?php
-
 /*
  * CKFinder Configuration File
  *
@@ -25,12 +24,12 @@ $config = array();
 $config['loadRoutes'] = false;
 
 $config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
-
+//$config['authentication'] = true;
 /*============================ License Key ============================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = 'localhost';
-$config['licenseKey'] = '8C2C8T7QWCRNWX1D76P14HX6W6NFJ';
+$config['licenseName'] = 'dbhomearch.vn';
+$config['licenseKey'] = '6N3N7G22J9WYJK1UH39KC6Q2G1FGW';
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
@@ -153,7 +152,7 @@ $config['forceAscii'] = false;
 $config['xSendfile'] = false;
 
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_debug
-$config['debug'] = false;
+$config['debug'] = true;
 
 /*==================================== Plugins ========================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_plugins

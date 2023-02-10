@@ -62,7 +62,7 @@ class IntroduceController extends Controller
 
     public function create()
     {
-        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 5)->get();
+        $categories = $this->categoryRepository->with(['allLevelChildren'])->where('parent_id', '=', 2)->get();
         return view('admin.introduces.create', compact('categories'));
     }
 

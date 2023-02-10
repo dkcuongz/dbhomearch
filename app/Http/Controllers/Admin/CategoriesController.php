@@ -105,8 +105,9 @@ class CategoriesController extends Controller
     {
         try {
             $category = $this->repository->where('slug', $slug)->first();
-            $categoryUpdate = $this->repository->update($request->all(), $category->id);
+            $data = $request->all();
             $data['slug'] = Str::slug($request->name);
+            $categoryUpdate = $this->repository->update($data, $category->id);
             $response = [
                 'message' => 'Category updated.',
                 'data' => $categoryUpdate->toArray(),

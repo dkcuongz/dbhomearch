@@ -24,7 +24,7 @@
                 <div class="col-inner">
                     <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2010468916">
                         <div class="img-inner image-zoom image-cover dark" style="padding-top:65%;">
-                            <img width="1528" height="1200" src="{{ asset('images-UI/backgroup-linh-vuc-hoat-dong.png') }}"
+                            <img width="1528" height="1200" src="{{ asset('images-UI/thiet-ke-thi-cong.png') }}"
                                  class="attachment-original size-original" alt="" loading="lazy"
                                  sizes="(max-width: 1528px) 100vw, 1528px"/>
                         </div>
@@ -39,7 +39,7 @@
                     <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_482633641">
                         <div class="img-inner image-zoom image-cover dark" style="padding-top:65%;">
                             <img width="2560" height="1440"
-                                 src="wp-content/uploads/2022/10/z3801636287448_3837d7998e686da47360bb1f0da11af3.jpg"
+                                 src="{{ asset('images-UI/thi-cong-noi-that.png') }}"
                                  class="attachment-original size-original" alt="" loading="lazy"
                                  sizes="(max-width: 2560px) 100vw, 2560px"/>
                         </div>
@@ -68,7 +68,7 @@
                 <div class="col-inner">
                     <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_610530270">
                         <div class="img-inner image-zoom image-cover dark" style="padding-top:65%;">
-                            <img width="2000" height="1500" src="wp-content/uploads/2022/02/90000_Post.jpg"
+                            <img width="2000" height="1500" src="{{ asset('images-UI/ho-tro-tan-tinh.png') }}"
                                  class="attachment-original size-original" alt="" loading="lazy"
                                  sizes="(max-width: 2000px) 100vw, 2000px"/>
                         </div>

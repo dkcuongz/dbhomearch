@@ -34,7 +34,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = $this->repository->with('image')->get();
+        $projects = $this->repository->with('image')->where('type',config('constants.post.type.post'))->get();
         return view('front-end.projects.index', compact('projects'));
     }
 
@@ -45,7 +45,7 @@ class ProjectController extends Controller
      */
     public function detail($id)
     {
-        $project = $this->repository->with('image')->find($id);
+        $project = $this->repository->with('image')->where('type',config('constants.post.type.post'))->find($id);
         return view('front-end.projects.detail', compact('project'));
     }
 }

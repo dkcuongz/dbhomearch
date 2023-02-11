@@ -43,6 +43,6 @@ class PostRepositoryEloquent extends BaseRepository implements PostRepository
     public function boot()
     {
         $this->pushCriteria(app(RequestCriteria::class));
-        $this->pushCriteria(new PostCriteria(config('constants.post.type.post')));
+//        $this->pushCriteria(new PostCriteria(config('constants.post.type.post')));
     }
 }

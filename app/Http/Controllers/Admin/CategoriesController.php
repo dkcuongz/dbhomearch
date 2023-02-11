@@ -112,7 +112,7 @@ class CategoriesController extends Controller
                 'message' => 'Category updated.',
                 'data' => $categoryUpdate->toArray(),
             ];
-            return redirect(route('admin.categories.index'))->with('message', $response['message']);
+            return redirect(route('admin.categories.index'))->with('success_message', $response['message']);
         } catch (\Exception $e) {
             return redirect()->back()->with('error_message',$e->getMessage())->withInput();
         }
@@ -128,7 +128,8 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        $this->repository->delete($id);
-        return redirect(route('admin.categories.index'))->with('message', 'Category deleted.');
+        $category = $this->repository->where('slug',$id);
+        $category->delete($id);
+        return redirect(route('admin.categories.index'))->with('success_message', 'Category deleted.');
     }
 }

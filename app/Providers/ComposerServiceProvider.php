@@ -16,7 +16,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         // Using class based composers...
         View::composer(
-            'components.header', 'App\Http\ViewComposers\CategoryComposer'
+            ['components.header', 'components.mobile-menu'], 'App\Http\ViewComposers\CategoryComposer',
         );
         View::composer(
             'components.banner', 'App\Http\ViewComposers\BannerComposer'

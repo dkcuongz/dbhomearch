@@ -21,16 +21,13 @@
                         @foreach($news as $new)
                             <div class="col post-item">
                                 <div class="col-inner">
-                                    <a href="berriver-n05-can-04-hien-dai-toi-gian/index.html" class="plain">
+                                    <a href="{{route('front.thiet-ke-noi-that.detail',[$new->category->slug ?? '', $new->id])}}" class="plain">
                                         <div class="box box-normal box-text-bottom box-blog-post has-hover">
                                             <div class="box-image">
                                                 <div class="image-cover" style="padding-top:75%;">
                                                     <img width="300" height="225"
                                                          src="{{asset($post->image->path ?? 'images-UI/notfound.jpg')}}"
-                                                         class="attachment-medium size-medium wp-post-image" alt=""
-                                                         loading="lazy"
-                                                         srcset="wp-content/uploads/2022/12/12-300x225.jpg 300w, wp-content/uploads/2022/12/12-1024x768.jpg 1024w, wp-content/uploads/2022/12/12-768x576.jpg 768w, wp-content/uploads/2022/12/12-1536x1152.jpg 1536w, wp-content/uploads/2022/12/12.jpg 1600w"
-                                                         sizes="(max-width: 300px) 100vw, 300px"/></div>
+                                                         class="attachment-medium size-medium wp-post-image" alt=""/></div>
                                             </div>
                                             <div class="box-text text-center">
                                                 <div class="box-text-inner blog-post-inner">

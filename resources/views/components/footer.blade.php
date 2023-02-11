@@ -23,7 +23,7 @@
                                 }
                             </style>
                         </div>
-                        <p style="text-align: center;"><span style="font-size: 120%;">MST: </span></p>
+                        <p style="text-align: center;"><span style="font-size: 120%;">MST: 2601087295</span></p>
                         <p> </p>
                     </div>
                     <style>
@@ -36,14 +36,14 @@
                 <div id="col-2085735894" class="col medium-5 small-12 large-5">
                     <div class="col-inner">
                         <p style="text-align: center;"><span
-                                style="font-size: 130%; text-transform: uppercase">Công ty kiến trúc và nội thất DBHome</span>
+                                style="font-size: 130%; text-transform: uppercase">CÔNG TY CỔ PHẦN KIẾN TRÚC & NỘI THẤT DBHOME</span>
                         </p>
                         <ul>
-                            <li>Trụ sở: 46 Trần Phú, Ph.Tân Dân, Thành phố Việt Trì, Phú Thọ.
+                            <li>Trụ sở chính: Số 79 Đường Trần Phú, Khu 1 phố Tân Phú, Phường Tân Dân, TP Việt Trì, Tỉnh Phú Thọ.
                             </li>
                             <li>VPGD: Tháp A Licogi13 Tower, 164 Khuất Duy Tiến, Nhân Chính, Thanh Xuân, Hà Nội</li>
                             <li>Hotline: 094 310 24 68</li>
-                            <li>Email: cskh@dbhomeach.vn</li>
+                            <li>Email: noithatdbhome.arch@gmail.com</li>
                         </ul>
                         <div id="gap-1609019296" class="gap-element clearfix" style="display:block; height:auto;">
                             <style>

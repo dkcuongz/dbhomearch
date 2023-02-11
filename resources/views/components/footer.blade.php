@@ -93,7 +93,7 @@
             }
 
             #section_410059410 .section-bg.bg-loaded {
-                background-image: url({{asset('wp-content/uploads/2022/06/9.jpg')}});
+                background-image: url({{asset('/images-UI/background-footer.png')}});
             }
 
             #section_410059410 .ux-shape-divider--top svg {

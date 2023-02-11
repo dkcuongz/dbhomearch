@@ -9,7 +9,7 @@
 @section('content')
     <div id="content" class="content-area page-wrapper" role="main">
         <div class="row row-main">
-            <div class="large-12 col">
+            <div class="large-12 col text-center">
                 <div class="col-inner">
                     {!! $new->description ?? '' !!}
                     <div id="comments" class="comments-area">

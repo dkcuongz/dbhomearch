@@ -29,7 +29,7 @@ $config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
 $config['licenseName'] = 'dbhomearch.vn';
-$config['licenseKey'] = '6N3N7G22J9WYJK1UH39KC6Q2G1FGW';
+$config['licenseKey'] = 'MXCXXXX6BFN72C9RVSMFCB7FVQTFM';
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir

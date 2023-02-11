@@ -38,13 +38,13 @@ class CategoriesSeeder extends Seeder
             'parent_id' => 0,
             'name' => 'DỰ ÁN',
             'slug' => 'du-an',
-            'has_child' => 1
+            'has_child' => 0
         ]);
         Categories::create([
             'parent_id' => 0,
             'name' => 'TIN TỨC- BLOG',
             'slug' => 'tin-tuc-blog',
-            'has_child' => 0
+            'has_child' => 1
         ]);
         Categories::create([
             'parent_id' => 0,

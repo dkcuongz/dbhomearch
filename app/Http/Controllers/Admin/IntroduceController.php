@@ -10,6 +10,8 @@ use App\Repositories\ImageRepository;
 use App\Repositories\MainContentRepository;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class IntroduceController extends Controller
 {

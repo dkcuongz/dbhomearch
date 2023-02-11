@@ -11,6 +11,8 @@ use App\Repositories\CategoriesRepository;
 use App\Repositories\ImageRepository;
 use App\Repositories\MainContentRepository;
 use App\Repositories\PostRepository;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class MainContentController extends Controller
 {

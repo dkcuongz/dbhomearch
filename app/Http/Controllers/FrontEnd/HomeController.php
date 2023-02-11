@@ -32,7 +32,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = $this->postRepository->with('image')->all();
+        $posts = $this->postRepository->with('image')->where('type', config('constants.post.type.post'))->get();
         return view('home.index', compact('posts'));
     }
 

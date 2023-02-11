@@ -32,7 +32,7 @@ class NewsComposer
      */
     public function compose(View $view)
     {
-        $news = $this->postRepository->with('image')->take(8)->get();
+        $news = $this->postRepository->with('image')->where('type', config('constants.post.type.new'))->take(8)->get();
         $view->with('news', $news);
     }
 }

@@ -30,7 +30,7 @@ return [
             'banner' => 1,
             'post' => 2,
             'introduce' => 3,
-            'new' => 3,
+            'new' => 4,
         ],
     ],
 ];

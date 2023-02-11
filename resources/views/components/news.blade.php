@@ -26,13 +26,13 @@
                                             <div class="box-image">
                                                 <div class="image-cover" style="padding-top:75%;">
                                                     <img width="300" height="225"
-                                                         src="{{asset($post->image->path ?? 'images-UI/notfound.jpg')}}"
+                                                         src="{{asset($new->image->path ?? 'images-UI/notfound.jpg')}}"
                                                          class="attachment-medium size-medium wp-post-image" alt=""/></div>
                                             </div>
                                             <div class="box-text text-center">
                                                 <div class="box-text-inner blog-post-inner">
-                                                    <h5 class="post-title is-large ">{{$post->title}}</h5>
-                                                    <div class="post-meta is-small op-8">{{$post->created_at}}</div>
+                                                    <h5 class="post-title is-large ">{{$new->title}}</h5>
+                                                    <div class="post-meta is-small op-8">{{$new->created_at}}</div>
                                                     <div class="is-divider"></div>
                                                     <p class="from_the_blog_excerpt "></p>
                                                 </div>

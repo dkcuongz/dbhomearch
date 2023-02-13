@@ -5,11 +5,11 @@
                 <!-- Logo -->
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
-                    <a href="{{route('front.home')}}" title="Nội Thất Dbhome - Đi đầu chất lượng" rel="home">
+                    <a href="{{route('front.home')}}" title="Nội Thất DBHOME - Đi đầu chất lượng" rel="home">
                         <img width="1020" height="515"
                              src="{{asset('images-UI/logo-01.png')}}"
                              class="header-logo-dark"
-                             alt="Nội Thất Dbhome"/></a>
+                             alt="Nội Thất DBHOME"/></a>
                 </div>
                 <!-- Mobile Left Elements -->
                 <div class="flex-col show-for-medium flex-left">

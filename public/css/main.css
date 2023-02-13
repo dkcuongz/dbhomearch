@@ -683,6 +683,74 @@ img.emoji {
     display: flex;
     width: 100%;
 }
-.autocomplete-suggestion:hover{
+
+.autocomplete-suggestion:hover {
     background-color: #7a8793;
+}
+
+.about-page {
+    display: flex;
+}
+
+.about-page .content {
+    width: 50%;
+}
+
+.block .content {
+    display: flex;
+    align-items: center;
+}
+
+.contain.wow.animate__fadeInUp {
+    visibility: visible;
+    animation-duration: 0.5s;
+    animation-name: fadeInUp;
+}
+
+@media only screen and (min-width: 1441px) {
+    .block .content .contain {
+        padding-left: 125px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .block .content .contain {
+        max-width: 550px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .about-page .about-image {
+        width: 50%;
+    }
+
+    .about-page .about-image-multi .img-pos01 img {
+        top: -90px;
+        left: -140px;
+        position: absolute;
+    }
+
+    .about-page .about-image-multi .img-pos02 {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.about-image-multi {
+    margin-top: 200px
+}
+
+.content.ltr {
+    margin-top: 200px
+}
+
+.about-waypoint {
+    margin-top: 200px
+}
+.team-profile {
+    margin-top: 200px
+}
+
+.block img {
+    display: block;
 }

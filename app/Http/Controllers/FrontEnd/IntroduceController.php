@@ -32,10 +32,10 @@ class IntroduceController extends Controller
      */
     public function index()
     {
-        $introduce = $this->repository->whereHas('category', function ($query) {
-            $query->where('id', 7);
-        })->first();
-        return view('front-end.introduces.detail', compact('introduce'));
+//        $introduce = $this->repository->whereHas('category', function ($query) {
+//            $query->where('id', 7);
+//        })->first();
+        return view('front-end.introduces.index');
     }
 
     /**

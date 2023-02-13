@@ -22,16 +22,17 @@
             </div>
             <div id="col-954730215" class="col medium-6 small-12 large-6">
                 <div class="col-inner">
-                    <p><span style="font-size: 14px; color: #282828;">DBHome hoạt động với tiêu chí mang đến lợi ích tối đa cho khách hàng, lấy chữ TÍN làm tiền đề để phát triển.</span>
+                    <p><span style="font-size: 14px; color: #282828;">DBHOME hoạt động với tiêu chí mang đến lợi ích tối đa cho khách hàng, lấy chữ TÍN làm tiền đề để phát triển.</span>
                     </p>
                     <ul>
-                        <li><span style="color: #282828;">Trụ sở: 46 Trần Phú, Ph.Tân Dân, Thành phố Việt Trì, Phú Thọ.</span>
+                        <li><span style="color: #282828;">Trụ sở chính: Số 79 Đường Trần Phú, Khu 1 phố Tân Phú, Phường Tân Dân, TP Việt Trì, Tỉnh Phú Thọ.</span>
                         </li>
                         <li><span style="color: #282828;">VPGD: Tháp A Licogi13 Tower, 164 Khuất Duy Tiến, Nhân Chính, Thanh Xuân, Hà Nội.</span>
                         </li>
                         <li><span style="color: #282828;">Hotline: </span><strong><span style="color: #ed1c24;"> 094 310 24 68</span></strong>
                         </li>
-                        <li><span style="color: #282828;">Email: cskh@dbhomeach.vn</span></li>
+                        <li><span style="color: #282828;">Email: noithatdbhome.arch@gmail.com</span></li>
+                    </ul>
                     </ul>
                 </div>
             </div>

@@ -16,7 +16,7 @@
     <link rel="prefetch" href="{{asset('wp-content/themes/flatsome/assets/js/chunk.vendors-popups.947eca5c.js')}}" />
     <link rel="prefetch" href="{{asset('wp-content/themes/flatsome/assets/js/chunk.vendors-slider.f0d2cbc9.js')}}" />
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}">
-    <meta property="og:image" content="{{asset('images-UI/logo-01.png')}}">
+    <meta property="og:image" content="{{asset('images-UI/dbhome.jpg')}}">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <style type="text/css">
         img.wp-smiley,

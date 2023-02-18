@@ -22,7 +22,7 @@
             </div>
             <div id="col-954730215" class="col medium-6 small-12 large-6">
                 <div class="col-inner">
-                    <p><span style="font-size: 14px; color: #282828;">DBHOME hoạt động với tiêu chí mang đến lợi ích tối đa cho khách hàng, lấy chữ TÍN làm tiền đề để phát triển.</span>
+                    <p><span style="font-size: 22px; color: #282828; font-weight: bold">DBHOME hoạt động với tiêu chí mang đến lợi ích tối đa cho khách hàng, lấy chữ TÍN làm tiền đề để phát triển.</span>
                     </p>
                     <ul>
                         <li><span style="color: #282828;">Trụ sở chính: Số 79 Đường Trần Phú, Khu 1 phố Tân Phú, Phường Tân Dân, TP Việt Trì, Tỉnh Phú Thọ.</span>

@@ -53,10 +53,13 @@
                     <h3 class="title">VỀ CHÚNG TÔI</h3>
                     <p></p>
                     <p>Với đội ngũ giàu kinh nghiệm cùng với các bạn trẻ ham học hỏi và sáng tạo những cái mới,
-                        DBHOME đi tiên phong trong việc nghiên cứu ứng dụng công nghệ và vật liệu mới trong công cuộc hành nghề của mình. Chúng tôi tin tưởng rằng, với thế mạnh nổi trội của
-                        DBHOME thể hiện ở đội ngũ thiết kế sáng tạo và quy trình quản lý chặt chẽ sẽ cung cấp dịch vụ tốt nhất, đáp ứng mọi nhu cầu và mang lại sự hài lòng đến với mọi khách hàng.</p>
+                        DBHOME đi tiên phong trong việc nghiên cứu ứng dụng công nghệ và vật liệu mới trong công cuộc
+                        hành nghề của mình. Chúng tôi tin tưởng rằng, với thế mạnh nổi trội của
+                        DBHOME thể hiện ở đội ngũ thiết kế sáng tạo và quy trình quản lý chặt chẽ sẽ cung cấp dịch vụ
+                        tốt nhất, đáp ứng mọi nhu cầu và mang lại sự hài lòng đến với mọi khách hàng.</p>
                     <p>Từ đó, DBHOME không chỉ là một người bạn đồng hành thuần tuý mà chúng tôi luôn đặt mục
-                        tiêu để trở thành một người bạn đủ thông minh và thấu hiểu để mang đến những giải pháp, những lựa chọn tốt nhất cho từng khách hàng.</p>
+                        tiêu để trở thành một người bạn đủ thông minh và thấu hiểu để mang đến những giải pháp, những
+                        lựa chọn tốt nhất cho từng khách hàng.</p>
                     <p></p>
                 </div>
             </div>
@@ -96,9 +99,11 @@
                     <div class="contain wow animate__fadeInUp" data-wow-duration=".5s"
                          style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
                         <h3 class="title">ĐỘI NGŨ CỦA CHÚNG TÔI</h3>
-                        Con người đóng vai trò quan trọng để làm nên thành công trong suốt gần một thập kỷ qua của DBHOME.
-                        Đội ngũ nhân viên tại DBHOME với chuyên môn giỏi về thiết kế và thi công công trình đã được công nhận năng lực đồng thời được xem là một công ty phát triển nhanh và uy tín.
-                    </div>
+                        <p style="color: #282828;">Con người đóng vai trò quan trọng để làm nên thành công trong suốt
+                            gần một thập kỷ qua của <span class="font-weight-bold">DBHOME</span>.
+                            Đội ngũ nhân viên tại <span class="font-weight-bold">DBHOME</span> với chuyên môn giỏi về thiết kế và thi công công trình đã
+                            được công nhận năng lực đồng thời được xem là một công ty phát triển nhanh và uy tín.
+                        </p></div>
                 </div>
                 <div class="folio-slide pt-xl-5 col-12 col-md-12">
                     <div
@@ -110,9 +115,9 @@
                                  style="width: 336.25px; visibility: hidden; animation-duration: 0.5s; animation-delay: 0s; animation-name: none; margin-right: 100px;">
                                 <img src="{{asset('images-UI/team.png')}}" alt="NGUYỄN NHƯ Ý">
                                 <div class="caption">
-                                    <div class="ceo">CEO</div>
-                                    <div class="name">ĐỖ ĐĂNG BÌNH</div>
-                                    <div class="level">Interior Designer</div>
+                                    <div style="font-size: 22px; color: #282828;" class="ceo">CEO</div>
+                                    <div style="font-size: 22px; color: #282828;" class="name">ĐỖ ĐĂNG BÌNH</div>
+                                    <div style="font-size: 22px; color: #282828;" class="level">Interior Designer</div>
                                     <div class="email">
                                         <a href="mailto:ynguyen.tdarch@gmail.com">noithatdbhome.arch@gmail.com</a>
                                     </div>

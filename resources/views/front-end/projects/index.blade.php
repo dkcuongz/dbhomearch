@@ -10,9 +10,9 @@
     <div id="content" class="blog-wrapper blog-archive page-wrapper">
         <div class="row align-center">
             <div class="large-10 col">
-                <div id="row-1983341037" class="row large-columns-3 medium-columns- small-columns-1 row-masonry">
+                <div id="row-1983341037" class="row large-columns-3 medium-columns-3 small-columns-1 ">
                     @foreach($projects as $project)
-                        <div class="col post-item">
+                        <div class="col-12 col-sm-4 post-item">
                             <div class="col-inner">
                                 <a href="{{route('front.du-an.detail',[$project->category->slug ?? '', $project->id])}}"
                                    class="plain">

@@ -22,7 +22,7 @@
                             <div class="icon">
                                 <div class="icon-inner">
                                     <img width="100" height="100"
-                                         src="{{asset("wp-content/uploads/2018/01/icon-1.png")}}"
+                                         src="{{asset("images-UI/icon-1.png")}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                             <div class="icon">
                                 <div class="icon-inner">
                                     <img width="100" height="100"
-                                         src="{{asset('wp-content/uploads/2018/01/icon-2.png')}}"
+                                         src="{{asset('images-UI/icon-2.png')}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                             <div class="icon">
                                 <div class="icon-inner">
                                     <img width="100" height="100"
-                                         src="{{asset('wp-content/uploads/2018/01/icon-3.png')}}"
+                                         src="{{asset('images-UI/icon-3.png')}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                             <div class="icon">
                                 <div class="icon-inner">
                                     <img width="100" height="100"
-                                         src="{{asset('wp-content/uploads/2018/01/icon-4.png')}}"
+                                         src="{{asset('images-UI/icon-4.png')}}"
                                          class="attachment-medium size-medium" alt="" loading="lazy"/></div>
                             </div>
                         </div>

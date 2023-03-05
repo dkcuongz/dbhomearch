@@ -14,7 +14,7 @@
                     @foreach($news as $new)
                         <div class="col post-item">
                             <div class="col-inner">
-                                <a href="{{route('front.thiet-ke-noi-that.detail',[$new->category->slug ?? '', $new->id])}}"
+                                <a href="{{route('front.tin-tuc-blog.detail',[$new->category->slug ?? '', $new->id])}}"
                                    class="plain">
                                     <div class="box box-text-bottom box-blog-post has-hover">
                                         <div class="box-image">

@@ -178,11 +178,7 @@
         text-transform: none;
         line-height: 0;
     }
-    @media (max-width: 549px){
-        .float-contact{
-            display:none
-        }
-    }</style>
+</style>
 <div class="float-contact">
     <button class="chat-zalo">
         <a href="http://zalo.me/0943102468">Chat Zalo</a>

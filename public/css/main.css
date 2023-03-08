@@ -661,9 +661,7 @@ h1, h2, h3, h4, h5, h6, .heading-font, .banner h1, .banner h2 {
 }
 
 @media (max-width: 549px) {
-    .float-contact {
-        display: none
-    }
+
 }
 
 img.wp-smiley,

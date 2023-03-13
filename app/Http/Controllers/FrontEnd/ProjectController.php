@@ -43,7 +43,7 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function detail($id)
+    public function detail($lug,$id)
     {
         $project = $this->repository->with('image')->where('type',config('constants.post.type.post'))->find($id);
         return view('front-end.projects.detail', compact('project'));

@@ -72,7 +72,7 @@ Route::group([
     Route::get('/du-an', [ProjectController::class, 'index'])
         ->name('du-an');
 
-    Route::get('/du-an/{id}', [ProjectController::class, 'detail'])
+    Route::get('/du-an/{slug}/{id}', [ProjectController::class, 'detail'])
         ->name('du-an.detail');
 
     Route::get('/tin-tuc-blog', [BlogController::class, 'index'])

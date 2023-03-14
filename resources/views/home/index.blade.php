@@ -27,7 +27,7 @@
                                 @foreach($posts as $post)
                                     <div class="col post-item" data-animate="fadeInUp">
                                         <div class="col-inner">
-                                            <a href="{{route('front.du-an.detail', $post->id)}}" class="plain">
+                                            <a href="{{route('front.du-an.detail', [$post->category->slug ?? '', $post->id])}}" class="plain">
                                                 <div class="box box-normal box-text-bottom box-blog-post has-hover">
                                                     <div class="box-image">
                                                         <div class="image-cover" style="padding-top:75%;">

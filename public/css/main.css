@@ -759,4 +759,8 @@ img.emoji {
         width: 100% !important;
         height: auto !important;
     }
+    .img-description {
+        width: auto;
+    }
+
 }

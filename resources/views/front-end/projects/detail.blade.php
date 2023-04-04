@@ -11,7 +11,9 @@
         <div class="row row-main">
             <div class="large-12 col text-center">
                 <div class="col-inner">
-                    {!! $project->description !!}
+                    <div class="img-description">
+                        {!! $project->description !!}
+                    </div>
                 </div>
             </div>
         </div>

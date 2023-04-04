@@ -8,7 +8,9 @@
         <div class="row row-main">
             <div class="large-12 col text-center">
                 <div class="col-inner">
-                    {!! $interior->description !!}
+                    <div class="img-description">
+                        {!! $interior->description !!}
+                    </div>
                 </div>
             </div>
         </div>

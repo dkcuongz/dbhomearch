@@ -745,10 +745,18 @@ img.emoji {
 .about-waypoint {
     margin-top: 200px
 }
+
 .team-profile {
     margin-top: 200px
 }
 
 .block img {
     display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+    .img-desciprion img {
+        width: 100% !important;
+        height: auto !important;
+    }
 }

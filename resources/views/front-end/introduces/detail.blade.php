@@ -11,7 +11,9 @@
         <div class="row row-main">
             <div class="large-12 col text-center">
                 <div class="col-inner">
-                    {!! $introduce->description ?? '' !!}
+                    <div class="img-desciprion">
+                        {!! $introduce->description ?? '' !!}
+                    </div>
                     <div id="comments" class="comments-area">
                         <div id="respond" class="comment-respond">
                             <form action="{{route('front.lien-he.store')}}" method="post"

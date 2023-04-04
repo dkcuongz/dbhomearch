@@ -11,7 +11,7 @@
         <div class="row row-main">
             <div class="large-12 col text-center">
                 <div class="col-inner">
-                    <div class="img-desciprion">
+                    <div class="img-description">
                         {!! $introduce->description ?? '' !!}
                     </div>
                     <div id="comments" class="comments-area">

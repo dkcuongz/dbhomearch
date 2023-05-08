@@ -36,6 +36,14 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="status">Nổi bật</label>
+                            <div class="form-check">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    {{ $post->is_out_standings == '1' ? 'Nổi bật' : 'Không' }}
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card-footer">

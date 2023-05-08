@@ -33,7 +33,8 @@ class HomeController extends Controller
     public function index()
     {
         $posts = $this->postRepository->with('image')->where('type', config('constants.post.type.post'))->get();
-        return view('home.index', compact('posts'));
+        $posts_out_standings = $this->postRepository->with('image')->where('type', config('constants.post.type.post'))->where('is_out_standings', 1)->get();
+        return view('home.index', compact('posts','posts_out_standings'));
     }
 
     public function search(Request $request)

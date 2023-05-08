@@ -16,7 +16,8 @@ class Post extends Model implements Transformable
         'description',
         'type',
         'status',
-        'category_id'
+        'category_id',
+        'is_out_standings'
     ];
 
     public function user()

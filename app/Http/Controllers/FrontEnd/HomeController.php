@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\FrontEnd;
 
+use App\Entities\Post;
 use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
@@ -32,9 +33,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = $this->postRepository->with('image')->where('type', config('constants.post.type.post'))->get();
-        $posts_out_standings = $this->postRepository->with('image')->where('type', config('constants.post.type.post'))->where('is_out_standings', 1)->get();
-        return view('home.index', compact('posts','posts_out_standings'));
+        $posts = Post::with('image')->where('type', config('constants.post.type.post'))->where('is_out_standings', 0)->where('is_reality', 0)->get();
+        $posts_out_standings = Post::with('image')->where('type', config('constants.post.type.post'))->where('is_out_standings', 1)->get();
+        $posts_reality = Post::with('image')->where('type', config('constants.post.type.post'))->where('is_reality', 1)->get();
+        return view('home.index', compact('posts','posts_out_standings','posts_reality'));
     }
 
     public function search(Request $request)

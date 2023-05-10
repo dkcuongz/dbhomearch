@@ -26,7 +26,7 @@ class BannerUpdateRequest extends FormRequest
         return [
             'title' => 'required',
             'description' => 'required',
-            'status' => 'required',
+
         ];
     }
 
@@ -43,4 +43,5 @@ class BannerUpdateRequest extends FormRequest
             'status.required' => 'Trạng thái không được để trống.',
         ];
     }
+
 }

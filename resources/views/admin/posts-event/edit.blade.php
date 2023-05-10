@@ -53,6 +53,7 @@
                         <div class="form-group">
                             <label for="status">Trạng thái</label>
                             <div class="form-check">
+                                <input type="hidden" value="0" name="status">
                                 <input class="form-check-input" type="checkbox"
                                        {{ $post->status == '1' ? 'checked' : '' }} name="status" id="status" value="1">
                                 <label class="form-check-label" for="flexRadioDefault1">

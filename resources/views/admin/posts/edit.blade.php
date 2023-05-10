@@ -53,6 +53,7 @@
                         <div class="form-group">
                             <label for="status">Trạng thái</label>
                             <div class="form-check">
+                                <input type="hidden" value="0" name="status">
                                 <input class="form-check-input" type="checkbox"
                                        {{ $post->status == '1' ? 'checked' : '' }} name="status" id="status" value="1">
                                 <label class="form-check-label" for="flexRadioDefault1">
@@ -64,13 +65,26 @@
                         <div class="form-group">
                             <label for="status">Nổi bật</label>
                             <div class="form-check">
+                                <input type="hidden" value="0" name="is_out_standings">
                                 <input class="form-check-input" type="checkbox"
                                        {{ $post->is_out_standings == '1' ? 'checked' : '' }} name="is_out_standings" id="is_out_standings" value="1">
-                                <label class="form-check-label" for="flexRadioDefault1">
+                                <label class="form-check-label">
                                     Nổi bật
                                 </label>
                             </div>
                             @error('is_out_standings') <span class="text-danger">{{$message}}</span> @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Công trình thực tế</label>
+                            <div class="form-check">
+                                <input type="hidden" value="0" name="is_reality">
+                                <input class="form-check-input" type="checkbox"
+                                       {{ $post->is_reality == '1' ? 'checked' : '' }} name="is_reality" id="is_reality" value="1">
+                                <label class="form-check-label">
+                                    Công trình thực tế
+                                </label>
+                            </div>
+                            @error('is_reality') <span class="text-danger">{{$message}}</span> @enderror
                         </div>
                     </div>
 

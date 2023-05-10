@@ -148,7 +148,6 @@
 <script type='text/javascript' src="{{asset('https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js?ver=0.1.0')}}" id='intersection-observer-polyfill-js'></script>
 <![endif]-->
 </body>
-</html>
 
 <style>.float-contact {
         position: fixed;
@@ -215,3 +214,7 @@
     })
     $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
 </script>
+@stack('js')
+@yield('js')
+</html>
+

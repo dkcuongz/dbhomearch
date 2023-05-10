@@ -44,6 +44,14 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="status">Công trình thực tế</label>
+                            <div class="form-check">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    {{ $post->is_reality == '1' ? 'Công trình thực tế' : 'Không' }}
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card-footer">

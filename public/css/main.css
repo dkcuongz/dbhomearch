@@ -760,3 +760,10 @@ img.emoji {
         height: auto !important;
     }
 }
+
+.click-to-show {
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    background: linear-gradient(to right, #f37025 0%, #ef2f58 100%);
+}

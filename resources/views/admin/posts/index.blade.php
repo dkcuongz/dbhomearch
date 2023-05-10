@@ -24,6 +24,7 @@
                             <th>Thumbnail</th>
                             <th>Trạng thái</th>
                             <th>Nổi bật</th>
+                            <th>Công trình thực tế</th>
                             <th style="width: 15%" class="text-center">Hành động</th>
                         </tr>
                         </thead>
@@ -39,6 +40,7 @@
                                 </td>
                                 <th><p class="font-weight-normal">{{$post->status ? 'Hiển thị' :'Ẩn' }}</p></th>
                                 <th><p class="font-weight-normal">{{$post->is_out_standings ? 'Nổi bật' :'Không' }}</p></th>
+                                <th><p class="font-weight-normal">{{$post->is_reality ? 'Thực tế' :'Không' }}</p></th>
                                 <td class="text-center">
                                     <a href="{{route('admin.posts.show', $post)}}" class="btn btn-primary btn-xs">
                                         Chi tiết

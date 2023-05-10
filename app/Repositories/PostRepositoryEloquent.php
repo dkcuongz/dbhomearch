@@ -25,6 +25,11 @@ class PostRepositoryEloquent extends BaseRepository implements PostRepository
         return Post::class;
     }
 
+    public function resetModel()
+    {
+        return parent::resetModel();
+    }
+
     /**
      * Specify Validator class name
      *

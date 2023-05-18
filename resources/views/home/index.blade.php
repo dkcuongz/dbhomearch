@@ -6,7 +6,7 @@
         @include('components.banner')
         <div class="page-main">
             <div class="about-page row pt-xl-5">
-                <div class="content col-12 col-md-12">
+                <div class="content col-12 col-md-6">
                     <div class="contain wow"
                          style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInUp;">
                         <h3 class="title">CHÚNG TÔI LÀ AI?</h3>
@@ -38,10 +38,8 @@
                 <div class="d-flex justify-center">
                     <button id="click-to-show" class="click-to-show">Xem thêm</button>
                 </div>
-                <div class="show-more hidden">
-                    <div class="about-image-multi wow animate__fadeInLeft col-12 col-md-6" data-wow-duration=".5s"
-                         data-wow-delay=".5s"
-                         style="visibility: hidden; animation-duration: 0.5s; animation-delay: 0.5s; animation-name: none;">
+                <div class="show-more hidden row">
+                    <div class="about-image-multi wow col-12 col-md-6">
                         <div class="img-pos01">
                             <img src="{{asset('images-UI/about-09-1.png')}}" alt="Giới thiệu">
                         </div>
@@ -50,7 +48,7 @@
                         </div>
                     </div>
                     <div class="content ltr col-12 col-md-6">
-                        <div class="contain wow animate__fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s"
+                        <div class="contain wow" data-wow-duration=".5s" data-wow-delay=".3s"
                              style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <h3 class="title">VỀ CHÚNG TÔI</h3>
                             <p></p>
@@ -84,8 +82,7 @@
                     </div>
                     <div class="team-profile">
                         <div class="content col-12 col-md-6">
-                            <div class="contain wow animate__fadeInUp" data-wow-duration=".5s"
-                                 style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                            <div class="contain wow animate__fadeInUp">
                                 <h3 class="title">ĐỘI NGŨ CỦA CHÚNG TÔI</h3>
                                 <p style="color: #282828;">Con người đóng vai trò quan trọng để làm nên thành công trong
                                     suốt

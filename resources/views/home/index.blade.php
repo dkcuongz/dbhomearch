@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="team-profile">
-                        <div class="content col-12 col-md-6">
+                        <div class="content col-12 col-md-12">
                             <div class="contain wow animate__fadeInUp">
                                 <h3 class="title">ĐỘI NGŨ CỦA CHÚNG TÔI</h3>
                                 <p style="color: #282828;">Con người đóng vai trò quan trọng để làm nên thành công trong

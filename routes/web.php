@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\MainContentController;
 use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Admin\IntroduceController as AdminIntroduceController;
+use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 use CKSource\CKFinderBridge\Controller\CKFinderController;
 
 /*
@@ -72,6 +73,9 @@ Route::group([
     Route::get('/du-an', [ProjectController::class, 'index'])
         ->name('du-an');
 
+    Route::get('/du-an/{slug}', [ProjectController::class, 'byCategory'])
+        ->name('du-an.child');
+
     Route::get('/du-an/{slug}/{id}', [ProjectController::class, 'detail'])
         ->name('du-an.detail');
 
@@ -102,6 +106,7 @@ Route::group([
     Route::resource('users', UsersController::class);
     Route::resource('categories', CategoriesController::class);
     Route::resource('posts', PostsController::class);
+    Route::resource('projects', AdminProjectController::class);
     Route::resource('banners', BannerController::class);
     Route::resource('main-contents', MainContentController::class);
     Route::resource('introduce', AdminIntroduceController::class);

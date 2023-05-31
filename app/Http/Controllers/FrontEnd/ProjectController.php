@@ -34,7 +34,17 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = $this->repository->with('image')->where('type',config('constants.post.type.post'))->get();
+        $projects = $this->repository->with('image')->where('type',config('constants.post.type.project'))->get();
+        return view('front-end.projects.index', compact('projects'));
+    }
+
+    public function byCategory($slug)
+    {
+        $projects = $this->repository->with('image')->where('status', 1)
+            ->where('type', config('constants.post.type.project'))
+            ->whereHas('category', function ($query) use($slug){
+                $query->where('slug', $slug);
+            })->orderBy('created_at', 'DESC')->paginate(8);
         return view('front-end.projects.index', compact('projects'));
     }
 

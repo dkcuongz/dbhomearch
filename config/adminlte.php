@@ -241,6 +241,11 @@ return [
             'icon' => 'fa fa-clipboard',
         ],
         [
+            'text' => 'Dự án',
+            'url' => '/admin/projects',
+            'icon' => 'fa fa-clipboard',
+        ],
+        [
             'text' => 'Bài viết sự kiện',
             'url' => '/admin/main-contents',
             'icon' => 'fa fa-comment',

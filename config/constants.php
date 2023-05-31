@@ -31,6 +31,7 @@ return [
             'post' => 2,
             'introduce' => 3,
             'new' => 4,
+            'project' => 5,
         ],
     ],
 ];

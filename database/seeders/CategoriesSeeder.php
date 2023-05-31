@@ -38,7 +38,7 @@ class CategoriesSeeder extends Seeder
             'parent_id' => 0,
             'name' => 'DỰ ÁN',
             'slug' => 'du-an',
-            'has_child' => 0
+            'has_child' => 1
         ]);
         Categories::create([
             'parent_id' => 0,
@@ -79,7 +79,7 @@ class CategoriesSeeder extends Seeder
         Categories::create([
             'parent_id' => 3,
             'name' => 'Nội Thất Biệt Thự - Penhouse - Duplex',
-            'slug' => 'noi-that-biet-thu-penhouse-duplex/',
+            'slug' => 'noi-that-biet-thu-penhouse-duplex',
             'has_child' => 0
         ]);
         Categories::create([

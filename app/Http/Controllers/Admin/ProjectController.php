@@ -53,7 +53,7 @@ class ProjectController extends Controller
             $query->whereHas('parent', function ($subQuery) {
                 $subQuery->where(['id' => 4]);
             });
-        })->where('type',config('constants.post.type.project'))->get();
+        })->where('type',config('constants.post.type.project'))->orderBy('id','DESC')->get();
         return view('admin.projects.index', compact('projects'));
     }
 

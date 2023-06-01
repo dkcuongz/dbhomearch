@@ -58,7 +58,7 @@ class MainContentController extends Controller
             $query->whereHas('parent', function ($subQuery) {
                 $subQuery->where(['id' => 5]);
             });
-        })->where('type',config('constants.post.type.new'))->get();
+        })->where('type',config('constants.post.type.new'))->orderBy('id','DESC')->get();
         return view('admin.posts-event.index', compact('posts'));
     }
 

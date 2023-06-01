@@ -40,7 +40,7 @@ class BannerController extends Controller
      */
     public function index()
     {
-        $banners = $this->repository->with('image')->get();
+        $banners = $this->repository->with('image')->orderBy('id','DESC')->get();
         return view('admin.banners.index', compact('banners'));
     }
 

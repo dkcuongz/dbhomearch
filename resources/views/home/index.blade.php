@@ -121,7 +121,7 @@
                                     @foreach($posts_out_standings as $posts_out_standing)
                                         <div class="col post-item" data-animate="fadeInUp">
                                             <div class="col-inner">
-                                                <a href="{{route('front.du-an.detail', [$posts_out_standing->category->slug ?? '', $posts_out_standing->id])}}"
+                                                <a href="{{route('front.thiet-ke-noi-that.detail', [$posts_out_standing->category->slug ?? '', $posts_out_standing->id])}}"
                                                    class="plain">
                                                     <div class="box box-normal box-text-bottom box-blog-post has-hover">
                                                         <div class="box-image">
@@ -173,7 +173,7 @@
                                     @foreach($posts as $post)
                                         <div class="col post-item" data-animate="fadeInUp">
                                             <div class="col-inner">
-                                                <a href="{{route('front.du-an.detail', [$post->category->slug ?? '', $post->id])}}"
+                                                <a href="{{route('front.thiet-ke-noi-that.detail', [$post->category->slug ?? '', $post->id])}}"
                                                    class="plain">
                                                     <div class="box box-normal box-text-bottom box-blog-post has-hover">
                                                         <div class="box-image">
@@ -226,7 +226,7 @@
                                     @foreach($posts_reality as $post_reality)
                                         <div class="col post-item" data-animate="fadeInUp">
                                             <div class="col-inner">
-                                                <a href="{{route('front.du-an.detail', [$post_reality->category->slug ?? '', $post_reality->id])}}"
+                                                <a href="{{route('front.thiet-ke-noi-that.detail', [$post_reality->category->slug ?? '', $post_reality->id])}}"
                                                    class="plain">
                                                     <div class="box box-normal box-text-bottom box-blog-post has-hover">
                                                         <div class="box-image">

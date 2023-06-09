@@ -55,7 +55,7 @@ class ProjectController extends Controller
      */
     public function detail($lug,$id)
     {
-        $project = $this->repository->with('image')->where('type',config('constants.post.type.post'))->find($id);
+        $project = $this->repository->with('image')->where('type',config('constants.post.type.project'))->find($id);
         return view('front-end.projects.detail', compact('project'));
     }
 }

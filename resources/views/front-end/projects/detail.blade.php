@@ -12,7 +12,7 @@
             <div class="large-12 col text-center">
                 <div class="col-inner">
                     <div class="img-description">
-                        {!! $project->description !!}
+                        {!! $project->description ?? '' !!}
                     </div>
                 </div>
             </div>

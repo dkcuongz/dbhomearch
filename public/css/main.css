@@ -760,7 +760,7 @@ img.emoji {
         height: auto !important;
     }
     .img-description img{
-        margin: 0 !important;
+        margin: 10px 0px !important;
     }
 }
 

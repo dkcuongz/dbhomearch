@@ -39,6 +39,11 @@ class HomeController extends Controller
         return view('home.index', compact('posts','posts_out_standings','posts_reality'));
     }
 
+    public function loveStory()
+    {
+        return view('bae.bae');
+    }
+
     public function search(Request $request)
     {
         $interiors = $this->postRepository->where('title', 'LIKE', '%' . $request->search . '%')

@@ -49,6 +49,9 @@ Route::group([
     Route::get('/', [HomeController::class, 'index'])
         ->name('home');
 
+    Route::get('/love-story', [HomeController::class, 'loveStory'])
+        ->name('bae');
+
     Route::get('/search', [HomeController::class, 'search'])
         ->name('search.project');
 

@@ -35,7 +35,7 @@ class InteriorController extends Controller
     public function index()
     {
         $interiors = $this->repository->with('image')->where('status', 1)
-            ->where('type', config('constants.post.type.post'))->orderBy('created_at', 'DESC')->paginate(8);
+            ->where('type', config('constants.post.type.post'))->orderBy('created_at', 'DESC')->paginate(9);
         return view('front-end.interiors.index', compact('interiors'));
     }
 
@@ -45,7 +45,7 @@ class InteriorController extends Controller
             ->where('type', config('constants.post.type.post'))
             ->whereHas('category', function ($query) use($slug){
                 $query->where('slug', $slug);
-            })->orderBy('created_at', 'DESC')->paginate(8);
+            })->orderBy('created_at', 'DESC')->paginate(9);
         return view('front-end.interiors.index', compact('interiors'));
     }
 

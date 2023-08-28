@@ -33,10 +33,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('image')->where('type', config('constants.post.type.post'))->where('is_out_standings', 0)->where('is_reality', 0)->get();
-        $posts_out_standings = Post::with('image')->where('type', config('constants.post.type.post'))->where('is_out_standings', 1)->get();
-        $posts_reality = Post::with('image')->where('type', config('constants.post.type.post'))->where('is_reality', 1)->get();
-        return view('home.index', compact('posts','posts_out_standings','posts_reality'));
+        $posts = Post::with('image')->where('type', config('constants.post.type.post'))
+            ->where('is_out_standings', 0)->where('is_reality', 0)
+            ->orderBy('created_at', 'DESC')->get();
+        $posts_out_standings = Post::with('image')
+            ->where('type', config('constants.post.type.post'))->where('is_out_standings', 1)
+            ->orderBy('created_at', 'DESC')->get();
+        $posts_reality = Post::with('image')->where('type', config('constants.post.type.post'))
+            ->where('is_reality', 1)
+            ->orderBy('created_at', 'DESC')->get();
+        return view('home.index', compact('posts', 'posts_out_standings', 'posts_reality'));
     }
 
     public function loveStory()
@@ -47,7 +53,7 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $interiors = $this->postRepository->where('title', 'LIKE', '%' . $request->search . '%')
-            ->where('status', 1)->where('type', config('constants.post.type.post'));
+            ->where('status', 1)->where('type', config('constants.post.type.post'))->orderBy('created_at', 'DESC');
         if ($request->ajax()) {
             $output = '';
             $interiors = $interiors->get();

@@ -44,7 +44,7 @@ class ProjectController extends Controller
             ->where('type', config('constants.post.type.project'))
             ->whereHas('category', function ($query) use($slug){
                 $query->where('slug', $slug);
-            })->orderBy('created_at', 'DESC')->paginate(8);
+            })->orderBy('created_at', 'DESC')->paginate(9);
         return view('front-end.projects.index', compact('projects'));
     }
 
